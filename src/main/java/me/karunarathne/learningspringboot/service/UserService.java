@@ -10,7 +10,7 @@ import java.util.UUID;
 public class UserService {
     private UserDao userDao ;
 
-    public UserService () {
+    public UserService (UserDao userDao) {
     }
 
     public List<User> getAllUsers() {
