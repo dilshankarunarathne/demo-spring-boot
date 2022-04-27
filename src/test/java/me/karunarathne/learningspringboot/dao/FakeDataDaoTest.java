@@ -74,7 +74,8 @@ class FakeDataDaoTest {
     void deleteUserByUserUid() throws Exception {
         UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
         fakeDataDao.deleteUserByUserUid(joeUserUid) ;
-        assertThat(fakeDataDao.selectUserByUserUid(joeUserUid).isPresent()).isFalse() ; 
+        assertThat(fakeDataDao.selectUserByUserUid(joeUserUid).isPresent()).isFalse() ;
+        assertThat(fakeDataDao.selectAllUsers()).isEmpty() ; 
     }
 
     @Test
