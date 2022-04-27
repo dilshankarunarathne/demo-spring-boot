@@ -23,8 +23,8 @@ public class FakeDataDao implements UserDao {
     }
 
     @Override
-    public User getUser(UUID userUd) {
-        return null;
+    public User getUser(UUID userUid) {
+        return database.get(userUid);
     }
 
     @Override
