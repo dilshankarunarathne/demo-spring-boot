@@ -25,7 +25,6 @@ public class UserService {
         return 1;
     }
 
-    @Override
     public int insertUser(UUID userUid, User user) {
         database.put(userUid, user) ;
         return 1;
