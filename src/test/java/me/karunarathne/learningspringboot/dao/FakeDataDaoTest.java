@@ -83,7 +83,7 @@ class FakeDataDaoTest {
     @Test
     void insertUser() throws Exception {
         UUID userUid = UUID.randomUUID() ;
-        User newJoe = new User(
+        User user = new User(
                 userUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
         fakeDataDao.insertUser(userUid, user) ;
