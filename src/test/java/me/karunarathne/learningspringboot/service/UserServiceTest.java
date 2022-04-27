@@ -15,6 +15,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given ;
 import static org.mockito.Mockito.verify;
 
@@ -112,7 +113,7 @@ class UserServiceTest {
         ) ;
 
         given (fakeDataDao.insertUser(
-                any (UUID.class), anna
+                any (UUID.class), eq (anna)
         )).willReturn(1) ;
 
         ArgumentCaptor <User> captor = ArgumentCaptor.forClass(User.class) ;
@@ -121,7 +122,9 @@ class UserServiceTest {
 
         verify (fakeDataDao).insertUser( any (UUID.class), captor.capture()) ;
 
-        User user = captor.getValue() ; 
+        User user = captor.getValue() ;
+
+        assertUserFields (user) ;
 
         assertThat (insertResult).isEqualTo(1) ;
     }
