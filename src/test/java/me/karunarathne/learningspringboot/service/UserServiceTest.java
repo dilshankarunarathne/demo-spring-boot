@@ -25,6 +25,10 @@ class UserServiceTest {
 
     @Test
     void shouldGetAllUsers() throws Exception {
+        User anna = new User(
+                annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+        ) ;
+
         given (fakeDataDao.selectAllUsers()).willReturn()
         List <User> allUsers = userService.getAllUsers() ;
 
