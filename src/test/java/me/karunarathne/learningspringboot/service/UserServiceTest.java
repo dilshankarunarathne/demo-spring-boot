@@ -121,6 +121,8 @@ class UserServiceTest {
 
         verify (fakeDataDao).insertUser( any (UUID.class), captor.capture()) ;
 
+        User user = captor.getValue() ; 
+
         assertThat (insertResult).isEqualTo(1) ;
     }
 
