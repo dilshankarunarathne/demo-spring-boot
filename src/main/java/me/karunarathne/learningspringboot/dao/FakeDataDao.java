@@ -1,4 +1,5 @@
 package me.karunarathne.learningspringboot.dao;
 
-public class FakeDataDao {
+public class FakeDataDao implements UserDao {
+    
 }
