@@ -55,7 +55,7 @@ class FakeDataDaoTest {
     }
 
     @Test
-    void updateUser() throws Exception {
+    void shouldUpdateUser() throws Exception {
         UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
         User newJoe = new User(
                 joeUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
@@ -65,7 +65,7 @@ class FakeDataDaoTest {
 
         Optional <User> user = fakeDataDao.selectUserByUserUid(joeUserUid) ;
         assertThat(user.isPresent()).isTrue() ;
-        
+
         assertThat(fakeDataDao.selectAllUsers()).hasSize(1) ;
         assertThat(user.get()).isEqualToComparingFieldByField(newJoe) ;
     }
