@@ -19,7 +19,8 @@ class FakeDataDaoTest {
     @Test
     void shouldSelectAllUsers() throws Exception {
         List<User> users = fakeDataDao.selectAllUsers();
-        assertThat() ;
+        assertThat(users).hasSize(1) ;
+        
     }
 
     @Test
