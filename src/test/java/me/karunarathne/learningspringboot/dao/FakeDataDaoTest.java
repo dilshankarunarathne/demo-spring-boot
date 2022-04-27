@@ -59,7 +59,7 @@ class FakeDataDaoTest {
         UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
         User anna = new User(
                 joeUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
-        ) ;
+        ) ; 
     }
 
     @Test
