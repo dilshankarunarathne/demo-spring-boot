@@ -18,7 +18,7 @@ class UserServiceTest {
     }
 
     @Test
-    void getAllUsers() throws Exception {
+    void shouldGetAllUsers() throws Exception {
     }
 
     @Test
