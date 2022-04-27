@@ -1,5 +1,6 @@
 package me.karunarathne.learningspringboot.service;
 
+import me.karunarathne.learningspringboot.dao.FakeDataDao;
 import me.karunarathne.learningspringboot.dao.UserDao;
 import me.karunarathne.learningspringboot.model.User;
 
@@ -8,6 +9,10 @@ import java.util.UUID;
 
 public class UserService {
     private UserDao userDao ;
+
+    public UserService () {
+        this.userDao = new FakeDataDao() ;
+    }
 
     public List<User> getAllUsers() {
         return null ;
