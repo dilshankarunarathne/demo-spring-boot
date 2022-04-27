@@ -106,6 +106,9 @@ class UserServiceTest {
 
     @Test
     void shouldInsertUser() throws Exception {
+        User anna = new User(
+            annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+    ) ;
     }
 
     private void assertUserFields(User user) {
