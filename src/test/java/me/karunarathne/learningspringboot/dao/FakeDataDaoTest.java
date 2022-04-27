@@ -58,7 +58,7 @@ class FakeDataDaoTest {
     void updateUser() throws Exception {
         UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
         User anna = new User(
-                annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+                joeUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
     }
 
