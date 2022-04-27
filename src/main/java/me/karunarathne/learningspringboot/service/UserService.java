@@ -20,7 +20,6 @@ public class UserService {
         return 1;
     }
 
-    @Override
     public int removeUser(UUID userUid) {
         database.remove(userUid) ;
         return 1;
