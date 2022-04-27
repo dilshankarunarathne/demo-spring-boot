@@ -7,7 +7,7 @@ import java.util.*;
 
 @Repository
 public class FakeDataDao implements UserDao {
-    private static Map <UUID, User> database ;
+    private Map <UUID, User> database ;
 
     static {
         database = new HashMap <> () ;
