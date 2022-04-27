@@ -14,8 +14,6 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.BDDMockito.given ;
 
-import org.glassfish.jersey.* ;
-
 class UserServiceTest {
     @Mock
     private FakeDataDao fakeDataDao ;
