@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.List;
+import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.BDDMockito.given ;
@@ -25,6 +26,7 @@ class UserServiceTest {
 
     @Test
     void shouldGetAllUsers() throws Exception {
+        UUID annaUserUid = UUID.randomUUID() ;
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
