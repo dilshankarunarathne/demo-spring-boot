@@ -23,7 +23,7 @@ public class UserService {
     }
 
     public Optional <User> getUser(UUID userUid) {
-        return null ;
+        return userDao.selectUserByUserUid(userUid) ;
     }
 
     public int updateUser(User user) {
