@@ -15,7 +15,6 @@ public class UserService {
         return database.get(userUid);
     }
 
-    @Override
     public int updateUser(User user) {
         database.put(user.getUserUid(), user) ;
         return 1;
