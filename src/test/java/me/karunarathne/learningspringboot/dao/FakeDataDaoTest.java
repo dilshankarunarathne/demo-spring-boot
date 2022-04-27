@@ -34,7 +34,7 @@ class FakeDataDaoTest {
     }
 
     @Test
-    void shouldSelectUserByUserUid() throws Exception {
+    void shouldNotSelectUserByRandomUserUid() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
