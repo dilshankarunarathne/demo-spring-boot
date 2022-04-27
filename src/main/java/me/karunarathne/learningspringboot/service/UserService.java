@@ -45,6 +45,7 @@ public class UserService {
     }
 
     public int insertUser(User user) {
-        return userDao.insertUser(UUID.randomUUID(), user) ;
+        UUID userUid = UUID.randomUUID() ;
+        return userDao.insertUser(, user) ;
     }
 }
