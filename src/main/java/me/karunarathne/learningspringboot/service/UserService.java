@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.UUID;
 
 public class UserService {
-    @Override
     public List<User> getAllUsers() {
         return new ArrayList<>(database.values());
     }
