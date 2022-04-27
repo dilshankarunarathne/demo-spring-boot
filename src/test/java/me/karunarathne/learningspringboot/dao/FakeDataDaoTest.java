@@ -44,7 +44,8 @@ class FakeDataDaoTest {
         assertThat(fakeDataDao.selectAllUsers()).hasSize(2) ;
 
         Optional <User> annaOptional = fakeDataDao.selectUserByUserUid(annaUserUid) ;
-        assertThat()
+        assertThat(annaOptional.isPresent()).isTrue() ;
+        annaOptional.get().getUserUid() ;
     }
 
     @Test
