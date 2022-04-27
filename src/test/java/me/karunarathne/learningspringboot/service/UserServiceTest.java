@@ -64,7 +64,7 @@ class UserServiceTest {
     }
 
     @Test
-    void updateUser() throws Exception {
+    void shouldUpdateUser() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
@@ -78,7 +78,7 @@ class UserServiceTest {
         int updateResult = userService.updateUser(anna) ;
 
         verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
-        verify (fakeDataDao.updateUser(captor.capture())) ;
+        verify (fakeDataDao).updateUser(captor.capture()) ;
 
         User user = captor.getValue() ;
         assertUserFields (user) ;
