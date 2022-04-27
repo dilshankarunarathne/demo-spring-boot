@@ -2,10 +2,7 @@ package me.karunarathne.learningspringboot.dao;
 
 import me.karunarathne.learningspringboot.model.User;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class FakeDataDao implements UserDao {
     private static Map <UUID, User> database ;
@@ -22,7 +19,7 @@ public class FakeDataDao implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return new ArrayList<>(database.values());
     }
 
     @Override
