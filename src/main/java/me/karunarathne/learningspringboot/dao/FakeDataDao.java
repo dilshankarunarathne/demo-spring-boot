@@ -12,9 +12,11 @@ public class FakeDataDao implements UserDao {
 
     static {
         database = new HashMap <> () ;
-        UUID userUid = UUID.randomUUID() ;
-        database.put (userUid, new User
-                (userUid, "Joe", "Jones", User.Gender.MALE, 22, "joe@gmail.com")
+        UUID joeUserUid = UUID.randomUUID() ;
+        database.put (
+                joeUserUid,
+                new User
+                (joeUserUid, "Joe", "Jones", User.Gender.MALE, 22, "joe@gmail.com")
         );
     }
 
