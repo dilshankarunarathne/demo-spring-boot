@@ -13,7 +13,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.BDDMockito.given ;
 
-import jer
+import jersey.repackaged.* ;
 
 class UserServiceTest {
     @Mock
