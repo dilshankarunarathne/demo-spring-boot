@@ -14,6 +14,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.BDDMockito.given ;
+import static org.mockito.Mockito.verify;
 
 class UserServiceTest {
     @Mock
@@ -72,6 +73,8 @@ class UserServiceTest {
         given (fakeDataDao.updateUser(anna)).willReturn(1) ;
 
         int updateResult = userService.updateUser(anna) ;
+
+        verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
     }
 
     @Test
