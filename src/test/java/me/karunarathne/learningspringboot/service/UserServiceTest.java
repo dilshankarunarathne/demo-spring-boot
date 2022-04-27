@@ -114,6 +114,8 @@ class UserServiceTest {
         given (fakeDataDao.insertUser(
                 any (UUID.class), anna
         )).willReturn(1) ;
+
+        int insertResult = userService.insertUser(anna) ;
     }
 
     private void assertUserFields(User user) {
