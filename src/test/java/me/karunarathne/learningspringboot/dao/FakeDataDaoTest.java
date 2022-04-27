@@ -56,6 +56,8 @@ class FakeDataDaoTest {
 
     @Test
     void updateUser() throws Exception {
+        UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
+
     }
 
     @Test
