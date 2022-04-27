@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class UserService {
     public List<User> getAllUsers() {
-        return new ArrayList<>(database.values());
+        return null;
     }
 
     public User getUser(UUID userUid) {
