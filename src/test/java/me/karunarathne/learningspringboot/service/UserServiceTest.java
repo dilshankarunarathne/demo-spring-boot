@@ -116,6 +116,8 @@ class UserServiceTest {
         )).willReturn(1) ;
 
         int insertResult = userService.insertUser(anna) ;
+
+        assertThat (insertResult).isEqualTo(1) ;
     }
 
     private void assertUserFields(User user) {
