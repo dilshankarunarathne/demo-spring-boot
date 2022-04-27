@@ -1,12 +1,13 @@
 package me.karunarathne.learningspringboot.service;
 
-import me.karunarathne.learningspringboot.dao.FakeDataDao;
 import me.karunarathne.learningspringboot.dao.UserDao;
 import me.karunarathne.learningspringboot.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class UserService {
     private UserDao userDao ;
 
