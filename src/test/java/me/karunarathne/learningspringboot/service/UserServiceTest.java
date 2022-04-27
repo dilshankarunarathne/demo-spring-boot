@@ -96,16 +96,16 @@ class UserServiceTest {
         given (fakeDataDao.selectUserByUserUid(annaUserUid)).willReturn(Optional.of(anna)) ;
         given (fakeDataDao.deleteUserByUserUid(annaUserUid)).willReturn(1) ;
 
-        ArgumentCaptor <UUID> captor = ArgumentCaptor.forClass(User.class) ;
+        ArgumentCaptor <UUID> captor = ArgumentCaptor.forClass(UUID.class) ;
 
         int deleteResult = userService.removeUser(annaUserUid) ;
 
         verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
-        verify (fakeDataDao).deleteUserByUserUid() ;
+        verify (fakeDataDao).deleteUserByUserUid(captor.capture()) ;
 
-        User user = captor.getValue() ;
-        assertUserFields (user) ;
-
+        UUID capturedAnnaUid = captor.getValue() ;
+        
+        assertUserFields (capturedAnnaUid). ;
         assertThat (deleteResult).isEqualTo(1) ;
     }
 
