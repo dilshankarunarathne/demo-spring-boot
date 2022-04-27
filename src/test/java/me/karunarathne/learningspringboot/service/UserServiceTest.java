@@ -2,22 +2,25 @@ package me.karunarathne.learningspringboot.service;
 
 import me.karunarathne.learningspringboot.dao.FakeDataDao;
 import me.karunarathne.learningspringboot.model.User;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.* ;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given ;
 import static org.mockito.Mockito.verify;
+
+import static org.assertj.core.api.Assertions.* ;
 
 class UserServiceTest {
     @Mock
@@ -51,7 +54,7 @@ class UserServiceTest {
     }
 
     @Test
-    void shoildGetUser() throws Exception {
+    void shouldGetUser() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
