@@ -11,7 +11,6 @@ public class UserService {
         return new ArrayList<>(database.values());
     }
 
-    @Override
     public User getUser(UUID userUid) {
         return database.get(userUid);
     }
