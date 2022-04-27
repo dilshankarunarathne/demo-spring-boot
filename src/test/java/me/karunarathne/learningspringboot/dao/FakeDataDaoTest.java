@@ -32,7 +32,8 @@ class FakeDataDaoTest {
     }
 
     @Test
-    void selectUserByUserUid() throws Exception {
+    void shouldSelectUserByUserUid() throws Exception {
+        
     }
 
     @Test
