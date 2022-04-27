@@ -104,7 +104,7 @@ class UserServiceTest {
         verify (fakeDataDao).deleteUserByUserUid(captor.capture()) ;
 
         UUID capturedAnnaUid = captor.getValue() ;
-        
+
         assertUserFields (capturedAnnaUid). ;
         assertThat (deleteResult).isEqualTo(1) ;
     }
