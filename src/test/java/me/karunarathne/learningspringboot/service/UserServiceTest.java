@@ -91,7 +91,7 @@ class UserServiceTest {
     }
 
     @Test
-    void insertUser() throws Exception {
+    void shouldInsertUser() throws Exception {
     }
 
     private void assertUserFields(User user) {
