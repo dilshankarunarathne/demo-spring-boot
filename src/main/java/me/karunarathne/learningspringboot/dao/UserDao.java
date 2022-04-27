@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface UserDao {
-    List<User> getAllUsers();
+    List<User> selectAllUsers();
 
     User getUser(UUID userUd);
 
