@@ -8,26 +8,26 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserServiceTest {
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws Exception {
     }
 
     @Test
-    void getAllUsers() {
+    void getAllUsers() throws Exception {
     }
 
     @Test
-    void getUser() {
+    void getUser() throws Exception {
     }
 
     @Test
-    void updateUser() {
+    void updateUser() throws Exception {
     }
 
     @Test
-    void removeUser() {
+    void removeUser() throws Exception {
     }
 
     @Test
-    void insertUser() {
+    void insertUser() throws Exception {
     }
 }
