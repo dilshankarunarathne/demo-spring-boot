@@ -25,7 +25,7 @@ class UserServiceTest {
 
     @Test
     void shouldGetAllUsers() throws Exception {
-        given ()
+        given (fakeDataDao.selectAllUsers()).willReturn()
         List <User> allUsers = userService.getAllUsers() ;
 
         assertThat(allUsers).hasSize(1) ;
