@@ -90,6 +90,6 @@ class FakeDataDaoTest {
 
         List <User> users = fakeDataDao.selectAllUsers() ;
         assertThat(users).hasSize(2) ;
-        
+        assertThat(fakeDataDao.selectUserByUserUid(userUid).get()).isEqualToComparingFieldByField(user) ;
     }
 }
