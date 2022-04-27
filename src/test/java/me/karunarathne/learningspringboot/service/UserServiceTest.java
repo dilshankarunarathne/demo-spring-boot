@@ -43,6 +43,10 @@ class UserServiceTest {
 
         User user = allUsers.get(0) ;
 
+        assertUserFields (user);
+    }
+
+    private void assertUserFields(User user) {
         assertThat(user.getAge()).isEqualTo(30) ;
         assertThat(user.getFirstName()).isEqualTo("anna") ;
         assertThat(user.getLastName()).isEqualTo("montana") ;
@@ -64,6 +68,7 @@ class UserServiceTest {
 
         assertThat(userOptional.isPresent()).isTrue() ;
         User user = userOptional.get() ;
+
     }
 
     @Test
