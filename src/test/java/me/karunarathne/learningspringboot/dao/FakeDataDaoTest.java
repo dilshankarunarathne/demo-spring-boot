@@ -62,9 +62,10 @@ class FakeDataDaoTest {
         ) ;
 
         fakeDataDao.updateUser(newJoe) ;
-        
+
         Optional <User> user = fakeDataDao.selectUserByUserUid(joeUserUid) ;
         assertThat(user.isPresent()).isTrue() ;
+        
         assertThat(fakeDataDao.selectAllUsers()).hasSize(1) ;
         assertThat(user.get()).isEqualToComparingFieldByField(newJoe) ;
     }
