@@ -16,7 +16,6 @@ public class UserService {
     }
 
     public int updateUser(User user) {
-        database.put(user.getUserUid(), user) ;
         return 1;
     }
 
