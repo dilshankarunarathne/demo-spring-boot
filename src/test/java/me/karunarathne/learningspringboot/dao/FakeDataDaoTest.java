@@ -6,14 +6,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FakeDataDaoTest {
+    private FakeDataDao fakeDataDao ;
 
     @BeforeEach
     void setUp() {
-        
+        fakeDataDao = new FakeDataDao() ;
     }
 
     @Test
-    void selectAllUsers() throws Exception {
+    void shouldSelectAllUsers() throws Exception {
     }
 
     @Test
