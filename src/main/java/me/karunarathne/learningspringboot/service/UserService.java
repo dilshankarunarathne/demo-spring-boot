@@ -45,6 +45,8 @@ public class UserService {
     }
 
     public int insertUser(UUID userUid, User user) {
+        UUID uuid = UUID.randomUUID() ;
+
         return 1;
     }
 }
