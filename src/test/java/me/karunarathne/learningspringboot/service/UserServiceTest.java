@@ -46,15 +46,6 @@ class UserServiceTest {
         assertUserFields (user);
     }
 
-    private void assertUserFields(User user) {
-        assertThat(user.getAge()).isEqualTo(30) ;
-        assertThat(user.getFirstName()).isEqualTo("anna") ;
-        assertThat(user.getLastName()).isEqualTo("montana") ;
-        assertThat(user.getGender()).isEqualTo(User.Gender.FEMALE) ;
-        assertThat(user.getEmail()).isEqualTo("anna@gmail.com") ;
-        assertThat(user.getUserUid()).isNotNull() ;
-    }
-
     @Test
     void shoildGetUser() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
@@ -81,5 +72,14 @@ class UserServiceTest {
 
     @Test
     void insertUser() throws Exception {
+    }
+    
+    private void assertUserFields(User user) {
+        assertThat(user.getAge()).isEqualTo(30) ;
+        assertThat(user.getFirstName()).isEqualTo("anna") ;
+        assertThat(user.getLastName()).isEqualTo("montana") ;
+        assertThat(user.getGender()).isEqualTo(User.Gender.FEMALE) ;
+        assertThat(user.getEmail()).isEqualTo("anna@gmail.com") ;
+        assertThat(user.getUserUid()).isNotNull() ;
     }
 }
