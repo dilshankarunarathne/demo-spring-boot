@@ -10,7 +10,7 @@ public class User {
     private final Integer age ;
     private final String email ;
 
-    enum Gender {
+    public enum Gender {
         MALE, FEMALE
     }
 
