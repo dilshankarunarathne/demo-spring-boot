@@ -105,7 +105,7 @@ class UserServiceTest {
 
         UUID capturedAnnaUid = captor.getValue() ;
 
-        assertUserFields (capturedAnnaUid). ;
+        assertThat (capturedAnnaUid).isEqualTo(annaUserUid) ;
         assertThat (deleteResult).isEqualTo(1) ;
     }
 
