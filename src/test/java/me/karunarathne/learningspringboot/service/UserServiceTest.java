@@ -9,6 +9,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.* ;
@@ -56,6 +57,8 @@ class UserServiceTest {
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
+
+        given (fakeDataDao.selectUserByUserUid(annaUserUid)).willReturn(Optional.of(anna)) ;
     }
 
     @Test
