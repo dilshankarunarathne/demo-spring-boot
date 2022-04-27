@@ -50,7 +50,7 @@ class FakeDataDaoTest {
 
     @Test
     void shouldNotSelectUserByRandomUserUid() throws Exception {
-        
+        Optional <User> user = fakeDataDao.selectUserByUserUid(UUID.randomUUID()) ;
     }
 
     @Test
