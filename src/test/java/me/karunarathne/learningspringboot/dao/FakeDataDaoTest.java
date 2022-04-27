@@ -20,8 +20,9 @@ class FakeDataDaoTest {
     void shouldSelectAllUsers() throws Exception {
         List<User> users = fakeDataDao.selectAllUsers();
         assertThat(users).hasSize(1) ;
-        User user = users.get(0) ;
         
+        User user = users.get(0) ;
+
         assertThat(user.getAge()).isEqualTo(22) ;
         assertThat(user.getFirstName()).isEqualTo("Joe") ;
         assertThat(user.getLastName()).isEqualTo("Jones") ;
