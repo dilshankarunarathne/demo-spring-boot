@@ -13,6 +13,8 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.BDDMockito.given ;
 
+import jer
+
 class UserServiceTest {
     @Mock
     private FakeDataDao fakeDataDao ;
@@ -30,6 +32,8 @@ class UserServiceTest {
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
+
+        ImmutableList
 
         given (fakeDataDao.selectAllUsers()).willReturn()
         List <User> allUsers = userService.getAllUsers() ;
