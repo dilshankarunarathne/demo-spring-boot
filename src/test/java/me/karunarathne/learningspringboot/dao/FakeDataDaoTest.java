@@ -31,7 +31,7 @@ class FakeDataDaoTest {
         assertThat(user.getGender()).isEqualTo(User.Gender.MALE) ;
         assertThat(user.getEmail()).isEqualTo("joe@gmail.com") ;
         assertThat(user.getUserUid()).isNotNull() ;
-        
+        assertThat(user.getUserUid()).isInstanceOf(UUID.class) ;
     }
 
     @Test
