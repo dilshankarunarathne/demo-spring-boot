@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -21,7 +22,7 @@ public class UserService {
         return userDao.selectAllUsers() ;
     }
 
-    public User getUser(UUID userUid) {
+    public Optional <User> getUser(UUID userUid) {
         return null ;
     }
 
