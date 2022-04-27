@@ -60,8 +60,9 @@ class UserServiceTest {
 
         given (fakeDataDao.selectUserByUserUid(annaUserUid)).willReturn(Optional.of(anna)) ;
 
-        Optional<User> anna = userService.getUser(annaUserUid);
-        
+        Optional <User> anna = userService.getUser(annaUserUid);
+
+
     }
 
     @Test
