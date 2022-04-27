@@ -24,7 +24,6 @@ public class UserService {
     }
 
     public int insertUser(UUID userUid, User user) {
-        database.put(userUid, user) ;
         return 1;
     }
 }
