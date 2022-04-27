@@ -14,6 +14,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.* ;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given ;
 import static org.mockito.Mockito.verify;
 
@@ -108,7 +109,11 @@ class UserServiceTest {
     void shouldInsertUser() throws Exception {
         User anna = new User(
             null, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
-    ) ;
+        ) ;
+
+        given (fakeDataDao.insertUser(
+                any (UUID.class), anna
+        )).willReturn(1) ;
     }
 
     private void assertUserFields(User user) {
