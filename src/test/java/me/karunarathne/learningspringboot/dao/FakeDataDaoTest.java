@@ -1,9 +1,12 @@
 package me.karunarathne.learningspringboot.dao;
 
+import me.karunarathne.learningspringboot.model.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.*;
 
 class FakeDataDaoTest {
     private FakeDataDao fakeDataDao ;
@@ -15,6 +18,8 @@ class FakeDataDaoTest {
 
     @Test
     void shouldSelectAllUsers() throws Exception {
+        List<User> users = fakeDataDao.selectAllUsers();
+        assertThat() ;
     }
 
     @Test
