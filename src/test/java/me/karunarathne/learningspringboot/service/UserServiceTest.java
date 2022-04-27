@@ -41,6 +41,13 @@ class UserServiceTest {
         List <User> allUsers = userService.getAllUsers() ;
 
         assertThat(allUsers).hasSize(1) ;
+
+        assertThat(user.getAge()).isEqualTo(22) ;
+        assertThat(user.getFirstName()).isEqualTo("Joe") ;
+        assertThat(user.getLastName()).isEqualTo("Jones") ;
+        assertThat(user.getGender()).isEqualTo(User.Gender.MALE) ;
+        assertThat(user.getEmail()).isEqualTo("joe@gmail.com") ;
+        assertThat(user.getUserUid()).isNotNull() ;
     }
 
     @Test
