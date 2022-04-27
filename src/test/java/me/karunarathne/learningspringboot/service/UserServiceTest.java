@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -33,7 +34,8 @@ class UserServiceTest {
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
 
-
+        List <User> users = new ArrayList<User>() ;
+        users.add(anna) ;
 
         given (fakeDataDao.selectAllUsers()).willReturn()
         List <User> allUsers = userService.getAllUsers() ;
