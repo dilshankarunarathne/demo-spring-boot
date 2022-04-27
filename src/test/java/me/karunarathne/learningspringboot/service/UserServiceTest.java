@@ -87,7 +87,7 @@ class UserServiceTest {
     }
 
     @Test
-    void removeUser() throws Exception {
+    void shouldRemoveUser() throws Exception {
     }
 
     @Test
