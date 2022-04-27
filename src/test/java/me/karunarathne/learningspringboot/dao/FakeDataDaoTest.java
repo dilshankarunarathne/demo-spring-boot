@@ -86,6 +86,6 @@ class FakeDataDaoTest {
         User newJoe = new User(
                 userUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
-        fakeDataDao.insertUser()
+        fakeDataDao.insertUser(userUid, user) ;
     }
 }
