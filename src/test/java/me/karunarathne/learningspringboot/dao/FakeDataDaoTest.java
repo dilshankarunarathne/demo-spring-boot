@@ -39,6 +39,10 @@ class FakeDataDaoTest {
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
         fakeDataDao.insertUser(annaUserUid, anna) ;
+
+        assertThat(fakeDataDao.selectAllUsers()).hasSize(2) ;
+
+        
     }
 
     @Test
