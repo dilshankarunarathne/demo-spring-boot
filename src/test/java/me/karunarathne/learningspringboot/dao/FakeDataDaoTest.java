@@ -51,6 +51,7 @@ class FakeDataDaoTest {
     @Test
     void shouldNotSelectUserByRandomUserUid() throws Exception {
         Optional <User> user = fakeDataDao.selectUserByUserUid(UUID.randomUUID()) ;
+        assertThat(user.isPresent()).isFalse() ;
     }
 
     @Test
