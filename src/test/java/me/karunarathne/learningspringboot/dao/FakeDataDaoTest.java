@@ -60,6 +60,7 @@ class FakeDataDaoTest {
         User newJoe = new User(
                 joeUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
+
         fakeDataDao.updateUser(newJoe) ;
         Optional <User> user = fakeDataDao.selectUserByUserUid(joeUserUid) ;
         assertThat(user.isPresent()).isTrue() ;
