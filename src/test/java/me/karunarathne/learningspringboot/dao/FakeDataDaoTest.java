@@ -21,7 +21,11 @@ class FakeDataDaoTest {
         List<User> users = fakeDataDao.selectAllUsers();
         assertThat(users).hasSize(1) ;
         User user = users.get(0) ;
-        
+        assertThat(user.getAge()).isEqualTo(22) ;
+        assertThat(user.getFirstName()).isEqualTo("Joe") ;
+        assertThat(user.getLastName()).isEqualTo("Jones") ;
+        assertThat(user.getGender()).isEqualTo(User.Gender.MALE) ;
+        assertThat(user.getEmail()).isEqualTo("joe@gmail.com") ;
     }
 
     @Test
