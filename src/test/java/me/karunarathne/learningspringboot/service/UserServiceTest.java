@@ -26,7 +26,7 @@ class UserServiceTest {
     void shouldGetAllUsers() throws Exception {
         List <User> allUsers = userService.getAllUsers() ;
 
-
+        assertThat(allUsers).hasSize(1) ;
     }
 
     @Test
