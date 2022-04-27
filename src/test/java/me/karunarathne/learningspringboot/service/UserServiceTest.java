@@ -9,7 +9,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.* ;
 
 class UserServiceTest {
     @Mock
@@ -24,6 +24,7 @@ class UserServiceTest {
 
     @Test
     void shouldGetAllUsers() throws Exception {
+        given ()
         List <User> allUsers = userService.getAllUsers() ;
 
         assertThat(allUsers).hasSize(1) ;
