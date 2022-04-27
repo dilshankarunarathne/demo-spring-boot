@@ -90,5 +90,6 @@ class FakeDataDaoTest {
 
         List <User> users = fakeDataDao.selectAllUsers() ;
         assertThat(users).hasSize(2) ;
+        
     }
 }
