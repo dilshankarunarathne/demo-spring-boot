@@ -99,7 +99,7 @@ class UserServiceTest {
         int deleteResult = userService.removeUser(annaUserUid) ;
 
         verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
-        verify (fakeDataDao).deleteUserByUserUid(captor.capture()) ;
+        verify (fakeDataDao).deleteUserByUserUid(annaUserUid) ;
 
         assertThat (deleteResult).isEqualTo(1) ;
     }
