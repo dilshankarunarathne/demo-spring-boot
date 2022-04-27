@@ -3,15 +3,17 @@ package me.karunarathne.learningspringboot.service;
 import me.karunarathne.learningspringboot.dao.FakeDataDao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 class UserServiceTest {
+    @Mock
     private FakeDataDao fakeDataDao ;
     private UserService userService ;
 
     @BeforeEach
     void setUp() throws Exception {
+        MockitoAnnotations.initMocks(this) ;
         userService = new UserService(fakeDataDao) ;
     }
 
