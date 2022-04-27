@@ -73,7 +73,7 @@ class UserServiceTest {
     @Test
     void insertUser() throws Exception {
     }
-    
+
     private void assertUserFields(User user) {
         assertThat(user.getAge()).isEqualTo(30) ;
         assertThat(user.getFirstName()).isEqualTo("anna") ;
