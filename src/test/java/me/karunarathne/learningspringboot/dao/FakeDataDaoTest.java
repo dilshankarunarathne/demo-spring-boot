@@ -45,7 +45,7 @@ class FakeDataDaoTest {
 
         Optional <User> annaOptional = fakeDataDao.selectUserByUserUid(annaUserUid) ;
         assertThat(annaOptional.isPresent()).isTrue() ;
-        annaOptional.get().getUserUid() ;
+        assertThat(annaOptional.get()).isEqualToComparingFieldByField(anna) ;
     }
 
     @Test
