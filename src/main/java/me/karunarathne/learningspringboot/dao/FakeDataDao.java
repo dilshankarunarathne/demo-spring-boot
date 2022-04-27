@@ -34,7 +34,7 @@ public class FakeDataDao implements UserDao {
     }
 
     @Override
-    public int removeUser(UUID userUid) {
+    public int deleteUserByUserUid(UUID userUid) {
         database.remove(userUid) ;
         return 1;
     }
