@@ -12,7 +12,7 @@ public class UserService {
     }
 
     public User getUser(UUID userUid) {
-        return database.get(userUid);
+        return null ;
     }
 
     public int updateUser(User user) {
