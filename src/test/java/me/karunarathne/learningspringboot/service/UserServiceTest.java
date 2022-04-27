@@ -42,6 +42,8 @@ class UserServiceTest {
 
         assertThat(allUsers).hasSize(1) ;
 
+        User user = allUsers.get(0) ;
+
         assertThat(user.getAge()).isEqualTo(22) ;
         assertThat(user.getFirstName()).isEqualTo("Joe") ;
         assertThat(user.getLastName()).isEqualTo("Jones") ;
