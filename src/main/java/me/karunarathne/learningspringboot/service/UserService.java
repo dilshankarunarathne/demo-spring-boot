@@ -15,7 +15,7 @@ public class UserService {
     }
 
     public List<User> getAllUsers() {
-        return null ;
+        return userDao.selectAllUsers() ;
     }
 
     public User getUser(UUID userUid) {
