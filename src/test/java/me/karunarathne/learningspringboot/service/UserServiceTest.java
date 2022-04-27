@@ -59,7 +59,6 @@ class UserServiceTest {
 
         assertThat(userOptional.isPresent()).isTrue() ;
         User user = userOptional.get() ;
-
     }
 
     @Test
