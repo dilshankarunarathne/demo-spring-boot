@@ -73,6 +73,7 @@ class FakeDataDaoTest {
     @Test
     void deleteUserByUserUid() throws Exception {
         UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
+        fakeDataDao.deleteUserByUserUid(joeUserUid) ;
     }
 
     @Test
