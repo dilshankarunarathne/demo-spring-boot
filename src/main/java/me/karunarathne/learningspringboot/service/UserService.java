@@ -20,7 +20,6 @@ public class UserService {
     }
 
     public int removeUser(UUID userUid) {
-        database.remove(userUid) ;
         return 1;
     }
 
