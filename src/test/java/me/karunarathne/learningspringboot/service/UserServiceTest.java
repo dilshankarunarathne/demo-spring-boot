@@ -115,7 +115,7 @@ class UserServiceTest {
                 any (UUID.class), anna
         )).willReturn(1) ;
 
-        
+        ArgumentCaptor <User> captor = ArgumentCaptor.forClass(User.class) ; 
 
         int insertResult = userService.insertUser(anna) ;
 
