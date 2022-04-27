@@ -2,7 +2,6 @@ package me.karunarathne.learningspringboot.service;
 
 import me.karunarathne.learningspringboot.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
