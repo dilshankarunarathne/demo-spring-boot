@@ -75,6 +75,8 @@ class UserServiceTest {
         int updateResult = userService.updateUser(anna) ;
 
         verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
+
+        assertThat (updateResult).isEqualTo(1) ; 
     }
 
     @Test
