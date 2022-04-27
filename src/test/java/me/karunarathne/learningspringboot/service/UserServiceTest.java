@@ -63,7 +63,7 @@ class UserServiceTest {
         Optional <User> userOptional = userService.getUser(annaUserUid);
 
         assertThat(userOptional.isPresent()).isTrue() ;
-        
+        User user = userOptional.get() ;
     }
 
     @Test
