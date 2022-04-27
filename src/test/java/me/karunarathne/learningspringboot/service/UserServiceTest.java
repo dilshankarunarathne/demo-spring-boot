@@ -12,7 +12,7 @@ class UserServiceTest {
 
     @BeforeEach
     void setUp() throws Exception {
-        userService = new UserService() ;
+        userService = new UserService(fakeDataDao) ;
     }
 
     @Test
