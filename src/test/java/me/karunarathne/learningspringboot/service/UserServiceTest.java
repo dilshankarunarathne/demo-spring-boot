@@ -115,9 +115,11 @@ class UserServiceTest {
                 any (UUID.class), anna
         )).willReturn(1) ;
 
-        ArgumentCaptor <User> captor = ArgumentCaptor.forClass(User.class) ; 
+        ArgumentCaptor <User> captor = ArgumentCaptor.forClass(User.class) ;
 
         int insertResult = userService.insertUser(anna) ;
+
+        verify (fakeDataDao).insertUser( any (UUID.class), captor.capture()) ;
 
         assertThat (insertResult).isEqualTo(1) ;
     }
