@@ -9,9 +9,7 @@ import java.util.*;
 public class FakeDataDao implements UserDao {
     private Map <UUID, User> database ;
 
-    static {
-        
-    }
+    
 
     @Override
     public List<User> selectAllUsers() {
