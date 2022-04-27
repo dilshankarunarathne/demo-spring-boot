@@ -9,25 +9,26 @@ class FakeDataDaoTest {
 
     @BeforeEach
     void setUp() {
+        
     }
 
     @Test
-    void selectAllUsers() {
+    void selectAllUsers() throws Exception {
     }
 
     @Test
-    void selectUserByUserUid() {
+    void selectUserByUserUid() throws Exception {
     }
 
     @Test
-    void updateUser() {
+    void updateUser() throws Exception {
     }
 
     @Test
-    void deleteUserByUserUid() {
+    void deleteUserByUserUid() throws Exception {
     }
 
     @Test
-    void insertUser() {
+    void insertUser() throws Exception {
     }
 }
