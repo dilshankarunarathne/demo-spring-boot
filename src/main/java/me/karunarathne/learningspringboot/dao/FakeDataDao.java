@@ -1,9 +1,11 @@
 package me.karunarathne.learningspringboot.dao;
 
 import me.karunarathne.learningspringboot.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class FakeDataDao implements UserDao {
     private static Map <UUID, User> database ;
 
