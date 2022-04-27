@@ -115,6 +115,8 @@ class UserServiceTest {
                 any (UUID.class), anna
         )).willReturn(1) ;
 
+        
+
         int insertResult = userService.insertUser(anna) ;
 
         assertThat (insertResult).isEqualTo(1) ;
