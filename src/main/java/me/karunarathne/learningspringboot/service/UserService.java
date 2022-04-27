@@ -29,8 +29,7 @@ public class UserService {
     public int updateUser(User user) {
         Optional <User> optionalUser = getUser(user.getUserUid()) ;
         if (optionalUser.isPresent()) {
-            userDao.updateUser(user) ;
-            return 1 ;
+            return userDao.updateUser(user) ;
         }
         return -1 ;
     }
