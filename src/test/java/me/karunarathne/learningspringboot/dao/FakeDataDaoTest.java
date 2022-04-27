@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.*;
@@ -42,6 +43,7 @@ class FakeDataDaoTest {
 
         assertThat(fakeDataDao.selectAllUsers()).hasSize(2) ;
 
+        Optional <User> user = fakeDataDao.selectUserByUserUid(annaUserUid) ;
         
     }
 
