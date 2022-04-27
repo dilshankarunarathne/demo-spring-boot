@@ -13,7 +13,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.* ;
 import static org.mockito.BDDMockito.given ;
 
-import jersey.repackaged.com.google.common.collect.ImmutableList
+import org.glassfish.jersey.* ;
 
 class UserServiceTest {
     @Mock
@@ -33,7 +33,7 @@ class UserServiceTest {
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
 
-        ImmutableL
+
 
         given (fakeDataDao.selectAllUsers()).willReturn()
         List <User> allUsers = userService.getAllUsers() ;
