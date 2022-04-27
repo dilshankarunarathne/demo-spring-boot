@@ -44,11 +44,11 @@ class UserServiceTest {
 
         User user = allUsers.get(0) ;
 
-        assertThat(user.getAge()).isEqualTo(22) ;
-        assertThat(user.getFirstName()).isEqualTo("Joe") ;
-        assertThat(user.getLastName()).isEqualTo("Jones") ;
-        assertThat(user.getGender()).isEqualTo(User.Gender.MALE) ;
-        assertThat(user.getEmail()).isEqualTo("joe@gmail.com") ;
+        assertThat(user.getAge()).isEqualTo(30) ;
+        assertThat(user.getFirstName()).isEqualTo("anna") ;
+        assertThat(user.getLastName()).isEqualTo("montana") ;
+        assertThat(user.getGender()).isEqualTo(User.Gender.FEMALE) ;
+        assertThat(user.getEmail()).isEqualTo("anna@gmail.com") ;
         assertThat(user.getUserUid()).isNotNull() ;
     }
 
