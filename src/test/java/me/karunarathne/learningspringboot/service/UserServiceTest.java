@@ -4,6 +4,7 @@ import me.karunarathne.learningspringboot.dao.FakeDataDao;
 import me.karunarathne.learningspringboot.model.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -72,11 +73,13 @@ class UserServiceTest {
         given (fakeDataDao.selectUserByUserUid(annaUserUid)).willReturn(Optional.of(anna)) ;
         given (fakeDataDao.updateUser(anna)).willReturn(1) ;
 
+        ArgumentCaptor <User> captor = ArgumentCaptor.forClass(User.class) ;
+
         int updateResult = userService.updateUser(anna) ;
 
         verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
 
-        assertThat (updateResult).isEqualTo(1) ; 
+        assertThat (updateResult).isEqualTo(1) ;
     }
 
     @Test
