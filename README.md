@@ -1,2 +1,2 @@
-# learning-spring-boot
+# Learning Spring Boot
  Demo project for Spring Boot
