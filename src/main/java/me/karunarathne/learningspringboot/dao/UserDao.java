@@ -8,7 +8,7 @@ import java.util.UUID;
 public interface UserDao {
     List<User> selectAllUsers();
 
-    User getUser(UUID userUd);
+    User selectUserByUserUid(UUID userUd);
 
     int updateUser(User user);
 
