@@ -71,7 +71,7 @@ class UserServiceTest {
         given (fakeDataDao.selectUserByUserUid(annaUserUid)).willReturn(Optional.of(anna)) ;
         given (fakeDataDao.updateUser(anna)).willReturn(1) ;
 
-        userService.updateUser(anna) ;
+        int updateResult = userService.updateUser(anna) ;
     }
 
     @Test
