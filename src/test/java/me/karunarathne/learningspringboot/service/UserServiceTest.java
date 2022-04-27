@@ -88,6 +88,25 @@ class UserServiceTest {
 
     @Test
     void shouldRemoveUser() throws Exception {
+        UUID annaUserUid = UUID.randomUUID() ;
+        User anna = new User(
+                annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+        ) ;
+
+        given (fakeDataDao.selectUserByUserUid(annaUserUid)).willReturn(Optional.of(anna)) ;
+        given (fakeDataDao.deleteUserByUserUid(annaUserUid)).willReturn(1) ;
+
+        ArgumentCaptor <UUID> captor = ArgumentCaptor.forClass(User.class) ;
+
+        int deleteResult = userService.removeUser(annaUserUid) ;
+
+        verify (fakeDataDao).selectUserByUserUid(annaUserUid) ;
+        verify (fakeDataDao).deleteUserByUserUid() ;
+
+        User user = captor.getValue() ;
+        assertUserFields (user) ;
+
+        assertThat (deleteResult).isEqualTo(1) ;
     }
 
     @Test
