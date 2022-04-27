@@ -34,7 +34,7 @@ class FakeDataDaoTest {
     }
 
     @Test
-    void shouldNotSelectUserByRandomUserUid() throws Exception {
+    void shouldSelectUserByUserUid() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
         User anna = new User(
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
@@ -46,6 +46,11 @@ class FakeDataDaoTest {
         Optional <User> annaOptional = fakeDataDao.selectUserByUserUid(annaUserUid) ;
         assertThat(annaOptional.isPresent()).isTrue() ;
         assertThat(annaOptional.get()).isEqualToComparingFieldByField(anna) ;
+    }
+
+    @Test
+    void shouldNotSelectUserByRandomUserUid() throws Exception {
+        
     }
 
     @Test
