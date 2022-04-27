@@ -51,7 +51,8 @@ class UserServiceTest {
     }
 
     @Test
-    void getUser() throws Exception {
+    void shoildGetUser() throws Exception {
+        UUID annaUserUid = UUID.randomUUID() ;
     }
 
     @Test
