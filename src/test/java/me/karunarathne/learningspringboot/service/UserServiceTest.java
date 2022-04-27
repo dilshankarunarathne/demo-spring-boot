@@ -53,6 +53,9 @@ class UserServiceTest {
     @Test
     void shoildGetUser() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
+        User anna = new User(
+                annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+        ) ;
     }
 
     @Test
