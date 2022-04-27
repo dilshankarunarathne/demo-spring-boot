@@ -89,6 +89,6 @@ class FakeDataDaoTest {
         fakeDataDao.insertUser(userUid, user) ;
 
         List <User> users = fakeDataDao.selectAllUsers() ;
-        assertThat().hasSize(2) ;
+        assertThat(users).hasSize(2) ;
     }
 }
