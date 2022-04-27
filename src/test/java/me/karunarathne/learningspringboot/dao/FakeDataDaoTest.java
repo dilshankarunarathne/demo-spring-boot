@@ -61,6 +61,7 @@ class FakeDataDaoTest {
                 joeUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
         fakeDataDao.updateUser(newJoe) ;
+        Optional <User> user = fakeDataDao.selectUserByUserUid(joeUserUid) ; 
     }
 
     @Test
