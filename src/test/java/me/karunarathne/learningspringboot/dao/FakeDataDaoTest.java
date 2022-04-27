@@ -75,12 +75,15 @@ class FakeDataDaoTest {
         UUID joeUserUid = fakeDataDao.selectAllUsers().get(0).getUserUid() ;
 
         fakeDataDao.deleteUserByUserUid(joeUserUid) ;
-        
+
         assertThat(fakeDataDao.selectUserByUserUid(joeUserUid).isPresent()).isFalse() ;
         assertThat(fakeDataDao.selectAllUsers()).isEmpty() ;
     }
 
     @Test
     void insertUser() throws Exception {
+        User newJoe = new User(
+                joeUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+        ) ;
     }
 }
