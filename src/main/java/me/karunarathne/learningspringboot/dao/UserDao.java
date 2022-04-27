@@ -3,12 +3,13 @@ package me.karunarathne.learningspringboot.dao;
 import me.karunarathne.learningspringboot.model.User;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface UserDao {
     List<User> selectAllUsers();
 
-    User selectUserByUserUid(UUID userUd);
+    Optional <User> selectUserByUserUid(UUID userUd);
 
     int updateUser(User user);
 
