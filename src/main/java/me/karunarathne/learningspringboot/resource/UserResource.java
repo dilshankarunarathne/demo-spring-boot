@@ -49,9 +49,9 @@ public class UserResource {
                 ) ;
     }
 
-    @RequestMapping (
+    @RequestMapping ( 
             method = RequestMethod.POST
-    ) 
+    )
     public ResponseEntity <Integer> insertNewUser (User user) {
         int result = userService.insertUser (user) ;
         if (result == 1) {
