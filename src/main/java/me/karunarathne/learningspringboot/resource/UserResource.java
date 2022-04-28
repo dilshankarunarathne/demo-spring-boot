@@ -68,7 +68,7 @@ public class UserResource {
             method = RequestMethod.DELETE,
             path = "{userUid}"
     )
-    public ResponseEntity <Integer> deleteUser (UUID userUid) {
+    public ResponseEntity <Integer> deleteUser (@PathVariable ("userUid") UUID userUid) {
         int result = userService.removeUser (userUid) ;
         return getIntegerResponseEntity (result) ;
     }
