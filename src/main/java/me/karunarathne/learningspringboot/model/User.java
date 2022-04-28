@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
 
 public class User {
-    private UUID userUid ;
+    private final UUID userUid ;
     private final String firstName ;
     private final String lastName ;
     private final Gender gender ;
@@ -66,9 +66,5 @@ public class User {
 
     public String getEmail() {
         return email;
-    }
-
-    public void setUserUid (UUID userUid) {
-        this.userUid = userUid ;
     }
 }
