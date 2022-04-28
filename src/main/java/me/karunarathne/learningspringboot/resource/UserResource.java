@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.QueryParam;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,7 +28,7 @@ public class UserResource {
     @RequestMapping (
             method = RequestMethod.GET
     )
-    public List<User> fetchUsers () {
+    public List<User> fetchUsers (@QueryParam ()) {
         return userService.getAllUsers() ;
     }
 
