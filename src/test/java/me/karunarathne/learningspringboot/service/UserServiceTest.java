@@ -78,7 +78,9 @@ class UserServiceTest {
     }
 
     @Test
-    
+    void shouldThrowExceptionWhenGenderIsInvalid () throws Exception {
+
+    }
 
     @Test
     void shouldGetUser() throws Exception {
