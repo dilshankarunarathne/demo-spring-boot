@@ -25,6 +25,7 @@ public class UserService {
         }
         try {
             User.Gender theGender = User.Gender.valueOf(gender.get()) ;
+            
         } catch (Exception e) {
             throw new IllegalStateException ("Invalid gender", e) ;
         }
