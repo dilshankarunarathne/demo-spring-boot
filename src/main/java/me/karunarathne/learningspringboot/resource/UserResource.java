@@ -54,7 +54,7 @@ public class UserResource {
         if (result == 1) {
             return ResponseEntity.ok().build() ;
         }
-        
+        return ResponseEntity.badRequest().build() ;
     }
 
     class ErrorMessage {
