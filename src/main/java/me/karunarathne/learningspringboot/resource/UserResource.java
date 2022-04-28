@@ -40,5 +40,6 @@ public class UserResource {
     )
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
         Optional <User> userOptional = userService.getUser(userUid) ;
+        if (userOptional.isPresent()) 
     }
 }
