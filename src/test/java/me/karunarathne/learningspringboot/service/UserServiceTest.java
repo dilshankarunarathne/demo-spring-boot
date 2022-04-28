@@ -70,9 +70,6 @@ class UserServiceTest {
                 .add (joe)
                 .build () ;
 
-        List <User> users = new ArrayList<User>() ;
-        users.add(anna) ;
-
         given (fakeDataDao.selectAllUsers()).willReturn(users) ;
         List <User> allUsers = userService.getAllUsers(Optional.empty()) ;
 
