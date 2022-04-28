@@ -24,7 +24,7 @@ public class UserService {
             return users ;
         }
         try {
-            User.Gender.valueOf(gender.get()) ;
+            User.Gender theGender = User.Gender.valueOf(gender.get()) ;
         } catch (Exception e) {
             throw new IllegalStateException ("Invalid gender", e) ;
         }
