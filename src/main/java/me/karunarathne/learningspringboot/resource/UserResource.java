@@ -40,9 +40,7 @@ public class UserResource {
             path = "{userUid}"
     )
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
-        Optional <User> userOptional = userService.getUser(userUid) ;
-
-        return userOptional
+        return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet(
                         () -> ResponseEntity.status(HttpStatus.NOT_FOUND)
