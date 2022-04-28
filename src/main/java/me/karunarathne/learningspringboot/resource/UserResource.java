@@ -30,7 +30,9 @@ public class UserResource {
         return userService.getAllUsers() ;
     }
 
-    @RequestMapping
+    @RequestMapping(
+            
+    )
     public User fetchUser () {
         return userService.getUser () ;
     }
