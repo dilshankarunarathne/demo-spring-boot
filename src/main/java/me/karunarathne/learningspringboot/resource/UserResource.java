@@ -48,4 +48,8 @@ public class UserResource {
                 "user " + userUid + " was not found !"
         ) ;
     }
+
+    class ErrorMessage {
+        
+    }
 }
