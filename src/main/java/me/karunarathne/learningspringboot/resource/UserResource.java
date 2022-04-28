@@ -15,6 +15,6 @@ public class UserResource {
     }
 
     public List<User> fetchUsers () {
-        
+        return userService.getAllUsers() ;
     }
 }
