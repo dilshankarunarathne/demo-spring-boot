@@ -27,7 +27,7 @@ public class UserResource {
     }
 
     @RequestMapping (
-            method = RequestMethod.GET,
+            method = RequestMethod.GET
     )
     public List<User> fetchUsers () {
         return userService.getAllUsers() ;
