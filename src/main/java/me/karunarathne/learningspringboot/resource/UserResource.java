@@ -28,7 +28,9 @@ public class UserResource {
     @RequestMapping (
             method = RequestMethod.GET
     )
-    public List<User> fetchUsers (@QueryParam ("gender") String gender, @QueryParam ()) {
+    public List<User> fetchUsers (
+            @QueryParam ("gender") String gender, @QueryParam ("ageLessThan") Integer ageLessThan
+            ) {
         return userService.getAllUsers() ;
     }
 
