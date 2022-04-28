@@ -1,5 +1,6 @@
 package me.karunarathne.learningspringboot.service;
 
+import jersey.repackaged.com.google.common.collect.ImmutableList;
 import me.karunarathne.learningspringboot.dao.FakeDataDao;
 import me.karunarathne.learningspringboot.model.User;
 
@@ -63,6 +64,9 @@ class UserServiceTest {
         User joe = new User(
                 annaUserUid, "joe", "jones", User.Gender.MALE, 30, "joe@gmail.com"
         ) ;
+
+        ImmutableList <User> users = new ImmutableList<User>()
+                .add ()
 
         List <User> users = new ArrayList<User>() ;
         users.add(anna) ;
