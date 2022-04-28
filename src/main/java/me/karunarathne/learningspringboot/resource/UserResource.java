@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.QueryParam;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -29,8 +30,7 @@ public class UserResource {
             method = RequestMethod.GET
     )
     public List<User> fetchUsers (
-                @QueryParam ("gender") String gender,
-                @QueryParam ("ageLessThan") Integer ageLessThan
+                @QueryParam("gender") String gender
             ) {
         System.out.println (gender) ;
         System.out.println (ageLessThan) ;
