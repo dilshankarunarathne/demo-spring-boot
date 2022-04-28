@@ -23,7 +23,9 @@ public class UserService {
         if (! gender.isPresent()) {
             return users ;
         }
-
+        try {
+            
+        }
     }
 
     public Optional <User> getUser(UUID userUid) {
