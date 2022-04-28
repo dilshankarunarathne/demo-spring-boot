@@ -4,6 +4,7 @@ import me.karunarathne.learningspringboot.model.User;
 import me.karunarathne.learningspringboot.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class UserResource {
         this.userService = userService ;
     }
 
+    @RequestMapping ()
     public List<User> fetchUsers () {
         return userService.getAllUsers() ;
     }
