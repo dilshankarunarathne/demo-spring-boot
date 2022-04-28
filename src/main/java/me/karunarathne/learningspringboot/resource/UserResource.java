@@ -41,9 +41,14 @@ public class UserResource {
     )
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
         Optional <User> userOptional = userService.getUser(userUid) ;
-        return userOptional.<ResponseEntity <?>> map(ResponseEntity::ok)
+
+        return userOptional
+                .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND)
-                        .body(new ErrorMessage ("user " + userUid + " was not found !"))) ;
+                .body (
+                        new ErrorMessage ("user " + userUid + " was not found !"))
+                ) ;
+
 //        if (userOptional.isPresent()) {
 //            return ResponseEntity.ok(userOptional.get()) ;
 //        }
