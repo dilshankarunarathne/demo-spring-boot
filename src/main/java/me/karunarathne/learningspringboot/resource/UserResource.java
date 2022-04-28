@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.ws.rs.QueryParam;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -30,8 +31,7 @@ public class UserResource {
             method = RequestMethod.GET
     )
     public List<User> fetchUsers ( @QueryParam("gender") String gender) {
-
-        return userService.getAllUsers() ;
+        return userService.getAllUsers(Optional.ofNullable(gender)) ;
     }
 
     @RequestMapping(
