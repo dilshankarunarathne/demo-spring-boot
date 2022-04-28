@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -38,6 +39,6 @@ public class UserResource {
             path = "{userUid}"
     )
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
-        userService.getUser(userUid) ;
+        Optional <User> userOptional = userService.getUser(userUid) ;
     }
 }
