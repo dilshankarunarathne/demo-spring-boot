@@ -52,7 +52,7 @@ public class UserResource {
     public ResponseEntity <Integer> insertNewUser (User user) {
         int result = userService.insertUser (user) ;
         if (result == 1) {
-            
+            return ResponseEntity.ok().build() ;
         }
     }
 
