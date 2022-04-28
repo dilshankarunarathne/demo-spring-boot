@@ -1,5 +1,6 @@
 package me.karunarathne.learningspringboot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDate;
@@ -64,6 +65,7 @@ public class User {
         return LocalDate.now().minusYears(age).getYear() ;
     }
 
+    @JsonIgnore
     public String getFirstName() {
         return firstName;
     }
