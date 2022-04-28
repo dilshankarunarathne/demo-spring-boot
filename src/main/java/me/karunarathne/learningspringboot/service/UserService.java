@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -25,7 +26,7 @@ public class UserService {
             return users ;
         }
         try {
-            User.Gender theGender = User.Gender.valueOf(gender.get()) ;
+            User.Gender theGender = User.Gender.valueOf(gender.get().toUpperCase(Locale.ROOT)) ;
             return users.stream ()
                     .filter ( user -> user.getGender().equals(theGender) )
                     .collect(Collectors.toList()) ;
