@@ -41,8 +41,9 @@ class UserServiceTest {
                 annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
         ) ;
 
-        List <User> users = new ArrayList<User>() ;
-        users.add(anna) ;
+        ImmutableList <User> users = new ImmutableList.Builder <User> ()
+                .add (anna)
+                .build () ;
 
         given (fakeDataDao.selectAllUsers()).willReturn(users) ;
         List <User> allUsers = userService.getAllUsers(Optional.empty()) ;
