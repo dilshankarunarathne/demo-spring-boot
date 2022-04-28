@@ -66,6 +66,7 @@ class UserServiceTest {
         ) ;
 
         ImmutableList <User> users = new ImmutableList<User>()
+                .add (anna)
                 .add ()
 
         List <User> users = new ArrayList<User>() ;
