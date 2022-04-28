@@ -111,7 +111,7 @@ class UserServiceTest {
         verify (fakeDataDao).updateUser(captor.capture()) ;
 
         User user = captor.getValue() ;
-        assertAnnaFields(user) ;
+        assertAnnaFields (user) ;
 
         assertThat (updateResult).isEqualTo(1) ;
     }
