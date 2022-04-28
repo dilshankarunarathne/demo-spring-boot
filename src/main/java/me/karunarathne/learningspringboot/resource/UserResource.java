@@ -32,6 +32,7 @@ public class UserResource {
                 @QueryParam ("gender") String gender, @QueryParam ("ageLessThan") Integer ageLessThan
             ) {
         System.out.println () ;
+        System.out.println () ;
         return userService.getAllUsers() ;
     }
 
