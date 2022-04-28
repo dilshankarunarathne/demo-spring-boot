@@ -65,7 +65,8 @@ public class UserResource {
     }
 
     @RequestMapping (
-            method = RequestMethod.DELETE
+            method = RequestMethod.DELETE,
+            path = "{userUid}"
     )
     public ResponseEntity <Integer> deleteUser (UUID userUid) {
         int result = userService.removeUser (userUid) ;
