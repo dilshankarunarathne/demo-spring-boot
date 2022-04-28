@@ -32,6 +32,10 @@ public class User {
         this.email = email;
     }
 
+    public static User newUser (UUID userUid, User user) {
+
+    }
+
     @Override
     public String toString() {
         return "User{" +
