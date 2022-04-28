@@ -45,7 +45,7 @@ public class UserResource {
             return ResponseEntity.ok(userOptional.get()) ;
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body (
-                
+                new ErrorMessage ()
         ) ;
     }
 
