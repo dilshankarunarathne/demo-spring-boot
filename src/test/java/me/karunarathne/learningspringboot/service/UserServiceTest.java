@@ -50,7 +50,7 @@ class UserServiceTest {
         assertThat(allUsers).hasSize(1) ;
 
         User user = allUsers.get(0) ;
-        assertUserFields (user);
+        assertAnnaFields(user);
     }
 
     @Test
@@ -72,8 +72,10 @@ class UserServiceTest {
 
         given (fakeDataDao.selectAllUsers()).willReturn(users) ;
 
-        List <User> filteredUsers = userService.getAllUsers(Optional.of("MALE")) ;
+        List <User> filteredUsers = userService.getAllUsers(Optional.of("FEMALE")) ;
         assertThat (filteredUsers).hasSize(1) ;
+
+        assertAnnaFields
     }
 
     @Test
@@ -109,7 +111,7 @@ class UserServiceTest {
         verify (fakeDataDao).updateUser(captor.capture()) ;
 
         User user = captor.getValue() ;
-        assertUserFields (user) ;
+        assertAnnaFields(user) ;
 
         assertThat (updateResult).isEqualTo(1) ;
     }
@@ -150,12 +152,12 @@ class UserServiceTest {
 
         User user = captor.getValue() ;
 
-        assertUserFields (user) ;
+        assertAnnaFields (user) ;
 
         assertThat (insertResult).isEqualTo(1) ;
     }
 
-    private void assertUserFields(User user) {
+    private void assertAnnaFields(User user) {
         assertThat(user.getAge()).isEqualTo(30) ;
         assertThat(user.getFirstName()).isEqualTo("anna") ;
         assertThat(user.getLastName()).isEqualTo("montana") ;
