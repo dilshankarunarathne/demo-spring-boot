@@ -50,13 +50,6 @@ public class UserResource {
                             new ErrorMessage ("user " + userUid + " was not found !")
                         )
                 ) ;
-
-//        if (userOptional.isPresent()) {
-//            return ResponseEntity.ok(userOptional.get()) ;
-//        }
-//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body (
-//                new ErrorMessage ("user " + userUid + " was not found !")
-//        ) ;
     }
 
     class ErrorMessage {
