@@ -23,7 +23,7 @@ public class UserResource {
     }
 
     @RequestMapping (
-            method = RequestMethod.GET, 
+            method = RequestMethod.GET,
             path = "hello"
     )
     public List<User> fetchUsers () {
