@@ -54,7 +54,9 @@ class UserServiceTest {
     }
 
     @Test
-    
+    public void shouldGetAllUserByGender () throws Exception {
+        
+    }
 
     @Test
     void shouldGetUser() throws Exception {
