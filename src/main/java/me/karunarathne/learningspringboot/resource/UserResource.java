@@ -62,6 +62,9 @@ public class UserResource {
         return ResponseEntity.badRequest().build();
     }
 
+    @RequestMapping (
+            
+    )
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
         int result = userService.updateUser (user) ;
         return getIntegerResponseEntity (result) ;
