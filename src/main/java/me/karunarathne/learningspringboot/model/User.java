@@ -60,8 +60,8 @@ public class User {
         return firstName + " " + lastName ;
     }
 
-    public LocalDate getDateOfBirth () {
-        return LocalDate.now().minusYears(age) ;
+    public int getDateOfBirth () {
+        return LocalDate.now().minusYears(age).getYear() ;
     }
 
     public String getFirstName() {
