@@ -74,7 +74,6 @@ class UserServiceTest {
 
         List <User> filteredUsers = userService.getAllUsers(Optional.of("FEMALE")) ;
         assertThat (filteredUsers).hasSize(1) ;
-
         assertAnnaFields (filteredUsers.get(0)) ;
     }
 
