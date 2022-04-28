@@ -73,7 +73,7 @@ class UserServiceTest {
         given (fakeDataDao.selectAllUsers()).willReturn(users) ;
 
         List <User> filteredUsers = userService.getAllUsers(Optional.of("MALE")) ;
-        assertThat () ;
+        assertThat (filteredUsers).hasSize(1) ;
     }
 
     @Test
