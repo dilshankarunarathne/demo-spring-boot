@@ -7,4 +7,7 @@ public class UserResource {
     private UserService userService ;
 
     @Autowired
+    public UserResource (UserService userService) {
+        
+    }
 }
