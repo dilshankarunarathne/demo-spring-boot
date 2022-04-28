@@ -61,7 +61,7 @@ public class User {
     }
 
     public LocalDate getDateOfBirth () {
-        
+        return LocalDate.now().minusYears(age) ;
     }
 
     public String getFirstName() {
