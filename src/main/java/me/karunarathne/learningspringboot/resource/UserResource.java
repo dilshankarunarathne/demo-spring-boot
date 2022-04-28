@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -42,7 +41,7 @@ public class UserResource {
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
-                .orElseGet(
+                .orElseGet (
                         () -> ResponseEntity.status(HttpStatus.NOT_FOUND)
                         .body (
                             new ErrorMessage ("user " + userUid + " was not found !")
