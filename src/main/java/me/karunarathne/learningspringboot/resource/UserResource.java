@@ -38,6 +38,6 @@ public class UserResource {
             path = "{userUid}"
     )
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
-        
+        userService.getUser(userUid) ;
     }
 }
