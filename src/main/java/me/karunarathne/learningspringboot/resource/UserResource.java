@@ -58,6 +58,10 @@ public class UserResource {
         return ResponseEntity.badRequest().build() ;
     }
 
+    public ResponseEntity <Integer> updateUser (@RequestBody User user) {
+        
+    }
+
     class ErrorMessage {
         String errorMessage ;
 
