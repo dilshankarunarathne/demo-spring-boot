@@ -1,5 +1,7 @@
 package me.karunarathne.learningspringboot.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.UUID;
 
 public class User {
@@ -14,7 +16,14 @@ public class User {
         MALE, FEMALE
     }
 
-    public User (UUID userUid, String firstName, String lastName, Gender gender, Integer age, String email) {
+    public User (
+            @JsonProperty ("userUid") UUID userUid,
+            @JsonProperty ("firstName") String firstName,
+            @JsonProperty ("lastName") String lastName,
+            @JsonProperty ("gender") Gender gender,
+            @JsonProperty ("age") Integer age,
+            @JsonProperty ("email") String email
+    ) {
         this.userUid = userUid;
         this.firstName = firstName;
         this.lastName = lastName;
