@@ -35,7 +35,7 @@ public class UserResource {
             method = RequestMethod.GET,
             path = "{userUid}"
     )
-    public User fetchUser (@PathVariable) {
+    public User fetchUser (@PathVariable ("userUid")) {
         return userService.getUser () ;
     }
 }
