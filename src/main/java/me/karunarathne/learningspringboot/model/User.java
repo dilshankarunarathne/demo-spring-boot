@@ -4,14 +4,17 @@ import java.util.UUID;
 
 public class User {
     private UUID userUid ;
-    private final String firstName ;
-    private final String lastName ;
-    private final Gender gender ;
-    private final Integer age ;
-    private final String email ;
+    private String firstName ;
+    private String lastName ;
+    private Gender gender ;
+    private Integer age ;
+    private String email ;
 
     public enum Gender {
         MALE, FEMALE
+    }
+
+    public User () {
     }
 
     public User (UUID userUid, String firstName, String lastName, Gender gender, Integer age, String email) {
@@ -23,7 +26,13 @@ public class User {
         this.email = email;
     }
 
-
+    public User (String firstName, String lastName, Gender gender, Integer age, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.age = age;
+        this.email = email;
+    }
 
     @Override
     public String toString() {
