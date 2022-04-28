@@ -36,7 +36,7 @@ public class UserResource {
     }
 
     @RequestMapping(
-            method = RequestMethod.GET, 
+            method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE,
             path = "{userUid}"
     )
@@ -53,7 +53,8 @@ public class UserResource {
 
     @RequestMapping (
             method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
