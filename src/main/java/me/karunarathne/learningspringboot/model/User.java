@@ -33,7 +33,9 @@ public class User {
     }
 
     public static User newUser (UUID userUid, User user) {
-
+        return new User (
+                userUid, user.getFirstName(), user.getLastName(), user.getGender(), user.getAge(), user.getEmail()
+        ) ;
     }
 
     @Override
