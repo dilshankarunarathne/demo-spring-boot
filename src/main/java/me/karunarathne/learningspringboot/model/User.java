@@ -26,14 +26,6 @@ public class User {
         this.email = email;
     }
 
-    public User (String firstName, String lastName, Gender gender, Integer age, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.age = age;
-        this.email = email;
-    }
-
     @Override
     public String toString() {
         return "User{" +
