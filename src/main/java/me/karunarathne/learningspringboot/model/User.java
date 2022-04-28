@@ -55,6 +55,10 @@ public class User {
         return userUid;
     }
 
+    public String getFullName () {
+        
+    }
+
     public String getFirstName() {
         return firstName;
     }
