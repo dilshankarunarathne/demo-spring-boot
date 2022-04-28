@@ -70,6 +70,7 @@ public class User {
         return firstName;
     }
 
+    @JsonIgnore
     public String getLastName() {
         return lastName;
     }
