@@ -63,6 +63,7 @@ public class UserResource {
     }
 
     @RequestMapping (
+            method = RequestMethod.PUT,
             
     )
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
