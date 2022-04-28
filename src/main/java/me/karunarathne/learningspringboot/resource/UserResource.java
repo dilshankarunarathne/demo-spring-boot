@@ -59,7 +59,7 @@ public class UserResource {
     }
 
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
-        
+        int result = userService.updateUser (user) ;
     }
 
     class ErrorMessage {
