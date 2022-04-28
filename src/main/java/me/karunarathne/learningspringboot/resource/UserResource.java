@@ -5,6 +5,7 @@ import me.karunarathne.learningspringboot.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,7 +47,8 @@ public class UserResource {
     }
 
     @RequestMapping (
-            method = RequestMethod.POST
+            method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
