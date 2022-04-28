@@ -14,5 +14,7 @@ public class UserResource {
         this.userService = userService ;
     }
 
-    public List<User> 
+    public List<User> fetchUsers () {
+        
+    }
 }
