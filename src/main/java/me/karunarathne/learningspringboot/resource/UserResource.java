@@ -8,6 +8,6 @@ public class UserResource {
 
     @Autowired
     public UserResource (UserService userService) {
-        
+        this.userService = userService ;
     }
 }
