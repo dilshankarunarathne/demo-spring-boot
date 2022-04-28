@@ -25,6 +25,8 @@ public class UserService {
         }
         try {
             User.Gender.valueOf(gender.get()) ;
+        } catch (Exception e) {
+            
         }
     }
 
