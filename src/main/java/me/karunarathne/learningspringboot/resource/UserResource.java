@@ -43,5 +43,6 @@ public class UserResource {
         if (userOptional.isPresent()) {
             return ResponseEntity.ok(userOptional.get()) ;
         }
+        
     }
 }
