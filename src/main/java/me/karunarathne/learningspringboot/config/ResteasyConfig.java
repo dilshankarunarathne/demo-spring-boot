@@ -1,4 +1,6 @@
 package me.karunarathne.learningspringboot.config;
 
-public class ResteasyConfig {
+import javax.ws.rs.core.Application;
+
+public class ResteasyConfig extends Application {
 }
