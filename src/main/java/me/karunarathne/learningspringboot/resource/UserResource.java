@@ -50,7 +50,7 @@ public class UserResource {
     }
 
     public ResponseEntity <Integer> insertNewUser (User user) {
-        
+        userService.insertUser (user) ;
     }
 
     class ErrorMessage {
