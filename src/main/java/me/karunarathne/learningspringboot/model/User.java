@@ -79,6 +79,7 @@ public class User {
         return gender;
     }
 
+    @JsonIgnore
     public Integer getAge() {
         return age;
     }
