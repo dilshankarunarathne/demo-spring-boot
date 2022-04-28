@@ -28,7 +28,8 @@ public class UserResource {
     }
 
     @RequestMapping (
-            method = RequestMethod.GET
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE
     )
     public List<User> fetchUsers ( @QueryParam("gender") String gender) {
         return userService.getAllUsers(Optional.ofNullable(gender)) ;
