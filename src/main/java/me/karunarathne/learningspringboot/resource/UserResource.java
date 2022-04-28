@@ -64,7 +64,7 @@ public class UserResource {
 
     @RequestMapping (
             method = RequestMethod.PUT,
-            
+            consumes = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
         int result = userService.updateUser (user) ;
