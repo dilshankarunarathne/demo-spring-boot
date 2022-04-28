@@ -66,7 +66,7 @@ public class UserResource {
 
     public ResponseEntity <Integer> deleteUser (UUID userUid) {
         int result = userService.removeUser (userUid) ;
-        
+        return getIntegerResponseEntity ()
     }
 
     private ResponseEntity<Integer> getIntegerResponseEntity (int result) {
