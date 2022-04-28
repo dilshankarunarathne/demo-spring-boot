@@ -50,18 +50,18 @@ public class UserResource {
     }
 
     class ErrorMessage {
-        String message ;
+        String errorMessage ;
 
         public ErrorMessage(String message) {
-            this.message = message;
+            this.errorMessage = message;
         }
 
         public String getMessage() {
-            return message;
+            return errorMessage;
         }
 
         public void setMessage(String message) {
-            this.message = message;
+            this.errorMessage = message;
         }
     }
 }
