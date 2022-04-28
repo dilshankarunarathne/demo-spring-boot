@@ -44,6 +44,8 @@ public class UserResource {
         if (userOptional.isPresent()) {
             return ResponseEntity.ok(userOptional.get()) ;
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("user " + userUid + " was not found !") ;
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body (
+                "user " + userUid + " was not found !"
+        ) ;
     }
 }
