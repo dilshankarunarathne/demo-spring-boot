@@ -64,6 +64,10 @@ public class UserResource {
         return getIntegerResponseEntity (result) ;
     }
 
+    public ResponseEntity <Integer> deleteUser (UUID userUid) {
+        
+    }
+
     private ResponseEntity<Integer> getIntegerResponseEntity (int result) {
         if (result == 1) {
             return ResponseEntity.ok().build();
