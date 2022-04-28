@@ -4,11 +4,11 @@ import java.util.UUID;
 
 public class User {
     private UUID userUid ;
-    private String firstName ;
-    private String lastName ;
-    private Gender gender ;
-    private Integer age ;
-    private String email ;
+    private final String firstName ;
+    private final String lastName ;
+    private final Gender gender ;
+    private final Integer age ;
+    private final String email ;
 
     public enum Gender {
         MALE, FEMALE
