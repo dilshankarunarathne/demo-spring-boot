@@ -18,7 +18,8 @@ public class UserService {
         this.userDao = userDao ;
     }
 
-    public List<User> getAllUsers() {
+    public List<User> getAllUsers(Optional <String> gender) {
+        if (gender)
         return userDao.selectAllUsers() ;
     }
 
