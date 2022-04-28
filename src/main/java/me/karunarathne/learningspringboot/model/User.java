@@ -14,9 +14,6 @@ public class User {
         MALE, FEMALE
     }
 
-    public User () {
-    }
-
     public User (UUID userUid, String firstName, String lastName, Gender gender, Integer age, String email) {
         this.userUid = userUid;
         this.firstName = firstName;
