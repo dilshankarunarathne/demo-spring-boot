@@ -19,7 +19,9 @@ public class UserResource {
         this.userService = userService ;
     }
 
-    @RequestMapping (method = RequestMethod.GET)
+    @RequestMapping (
+            method = RequestMethod.GET
+    )
     public List<User> fetchUsers () {
         return userService.getAllUsers() ;
     }
