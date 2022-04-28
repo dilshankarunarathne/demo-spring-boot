@@ -32,7 +32,7 @@ public class UserResource {
 
     @RequestMapping(
             method = RequestMethod.GET,
-            path = ""
+            path = "{}"
     )
     public User fetchUser () {
         return userService.getUser () ;
