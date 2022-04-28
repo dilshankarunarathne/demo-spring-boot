@@ -37,6 +37,6 @@ public class UserResource {
             path = "{userUid}"
     )
     public User fetchUser (@PathVariable ("userUid") UUID userUid) {
-        return userService.getUser (userUid) ;
+        return userService.getUser (userUid).get() ;
     }
 }
