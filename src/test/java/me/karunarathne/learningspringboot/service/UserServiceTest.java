@@ -65,10 +65,10 @@ class UserServiceTest {
                 annaUserUid, "joe", "jones", User.Gender.MALE, 30, "joe@gmail.com"
         ) ;
 
-        ImmutableList <User> users = new ImmutableList<User>()
+        ImmutableList <User> users = new ImmutableList.Builder <User> ()
                 .add (anna)
                 .add (joe)
-                
+                .build () ;
 
         List <User> users = new ArrayList<User>() ;
         users.add(anna) ;
