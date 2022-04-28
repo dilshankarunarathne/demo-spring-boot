@@ -79,7 +79,7 @@ class UserServiceTest {
 
     @Test
     void shouldThrowExceptionWhenGenderIsInvalid () throws Exception {
-
+        assertThatThrownBy ()
     }
 
     @Test
