@@ -52,10 +52,14 @@ public class UserResource {
     )
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
+        return getIntegerResponseEntity (result);
+    }
+
+    private ResponseEntity<Integer> getIntegerResponseEntity(int result) {
         if (result == 1) {
-            return ResponseEntity.ok().build() ;
+            return ResponseEntity.ok().build();
         }
-        return ResponseEntity.badRequest().build() ;
+        return ResponseEntity.badRequest().build();
     }
 
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
