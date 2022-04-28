@@ -49,6 +49,10 @@ public class UserResource {
                 ) ;
     }
 
+    public ResponseEntity <Integer> insertNewUser (User user) {
+        
+    }
+
     class ErrorMessage {
         String errorMessage ;
 
