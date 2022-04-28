@@ -55,13 +55,6 @@ public class UserResource {
         return getIntegerResponseEntity (result) ;
     }
 
-    private ResponseEntity<Integer> getIntegerResponseEntity(int result) {
-        if (result == 1) {
-            return ResponseEntity.ok().build();
-        }
-        return ResponseEntity.badRequest().build();
-    }
-
     @RequestMapping (
             method = RequestMethod.PUT,
             consumes = MediaType.APPLICATION_JSON_VALUE
@@ -69,6 +62,13 @@ public class UserResource {
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
         int result = userService.updateUser (user) ;
         return getIntegerResponseEntity (result) ;
+    }
+
+    private ResponseEntity<Integer> getIntegerResponseEntity(int result) {
+        if (result == 1) {
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.badRequest().build();
     }
 
     class ErrorMessage {
