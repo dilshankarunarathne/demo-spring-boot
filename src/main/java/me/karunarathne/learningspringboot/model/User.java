@@ -14,7 +14,7 @@ public class User {
         MALE, FEMALE
     }
 
-    public User(UUID userUid, String firstName, String lastName, Gender gender, Integer age, String email) {
+    public User (UUID userUid, String firstName, String lastName, Gender gender, Integer age, String email) {
         this.userUid = userUid;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,6 +22,8 @@ public class User {
         this.age = age;
         this.email = email;
     }
+
+
 
     @Override
     public String toString() {
