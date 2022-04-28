@@ -21,7 +21,7 @@ public class UserService {
     public List<User> getAllUsers(Optional <String> gender) {
         List <User> users = userDao.selectAllUsers () ;
         if (! gender.isPresent()) {
-            return userDao.selectAllUsers();
+            return users ;
         }
 
     }
