@@ -50,7 +50,7 @@ public class User {
                 '}';
     }
 
-    public UUID getUserUid() {
+    public UUID getId() {
         return userUid;
     }
 
