@@ -31,7 +31,7 @@ public class UserResource {
     }
 
     @RequestMapping(
-            
+            method = RequestMethod.GET, 
     )
     public User fetchUser () {
         return userService.getUser () ;
