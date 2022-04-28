@@ -50,6 +50,8 @@ public class UserResource {
     }
 
     class ErrorMessage {
+        String message ;
+
         
     }
 }
