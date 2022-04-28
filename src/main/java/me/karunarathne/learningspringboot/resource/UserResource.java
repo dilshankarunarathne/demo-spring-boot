@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping (
@@ -35,7 +36,7 @@ public class UserResource {
             method = RequestMethod.GET,
             path = "{userUid}"
     )
-    public User fetchUser (@PathVariable ("userUid")) {
+    public User fetchUser (@PathVariable ("userUid") UUID userUid) {
         return userService.getUser () ;
     }
 }
