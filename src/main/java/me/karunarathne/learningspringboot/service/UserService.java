@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -25,8 +26,9 @@ public class UserService {
         }
         try {
             User.Gender theGender = User.Gender.valueOf(gender.get()) ;
-            return users.stream () 
-                    .filter ()
+            return users.stream ()
+                    .filter ( user -> user.getGender().equals(theGender) )
+                    .collect(Collectors.toList()) ;
         } catch (Exception e) {
             throw new IllegalStateException ("Invalid gender", e) ;
         }
