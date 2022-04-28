@@ -64,7 +64,7 @@ public class UserResource {
         return getIntegerResponseEntity (result) ;
     }
 
-    private ResponseEntity<Integer> getIntegerResponseEntity(int result) {
+    private ResponseEntity<Integer> getIntegerResponseEntity (int result) {
         if (result == 1) {
             return ResponseEntity.ok().build();
         }
