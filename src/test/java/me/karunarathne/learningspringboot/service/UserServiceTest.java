@@ -49,13 +49,31 @@ class UserServiceTest {
         assertThat(allUsers).hasSize(1) ;
 
         User user = allUsers.get(0) ;
-
         assertUserFields (user);
     }
 
     @Test
     public void shouldGetAllUserByGender () throws Exception {
-        
+        UUID annaUserUid = UUID.randomUUID() ;
+        User anna = new User(
+                annaUserUid, "anna", "montana", User.Gender.FEMALE, 30, "anna@gmail.com"
+        ) ;
+
+        UUID joeUserUid = UUID.randomUUID() ;
+        User joe = new User(
+                annaUserUid, "joe", "jones", User.Gender.MALE, 30, "joe@gmail.com"
+        ) ;
+
+        List <User> users = new ArrayList<User>() ;
+        users.add(anna) ;
+
+        given (fakeDataDao.selectAllUsers()).willReturn(users) ;
+        List <User> allUsers = userService.getAllUsers(Optional.empty()) ;
+
+        assertThat(allUsers).hasSize(1) ;
+
+        User user = allUsers.get(0) ;
+        assertUserFields (user);
     }
 
     @Test
