@@ -36,7 +36,8 @@ public class UserResource {
     }
 
     @RequestMapping(
-            method = RequestMethod.GET,
+            method = RequestMethod.GET, 
+            produces = MediaType.APPLICATION_JSON_VALUE,
             path = "{userUid}"
     )
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
