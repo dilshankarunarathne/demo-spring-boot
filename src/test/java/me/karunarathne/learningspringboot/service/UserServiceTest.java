@@ -54,6 +54,9 @@ class UserServiceTest {
     }
 
     @Test
+    
+
+    @Test
     void shouldGetUser() throws Exception {
         UUID annaUserUid = UUID.randomUUID() ;
         User anna = new User(
