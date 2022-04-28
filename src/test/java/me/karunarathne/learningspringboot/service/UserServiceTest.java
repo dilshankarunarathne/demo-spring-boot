@@ -173,6 +173,6 @@ class UserServiceTest {
         assertThat(user.getLastName()).isEqualTo("montana") ;
         assertThat(user.getGender()).isEqualTo(User.Gender.FEMALE) ;
         assertThat(user.getEmail()).isEqualTo("anna@gmail.com") ;
-        assertThat(user.getId()).isNotNull() ;
+        assertThat(user.getUserUid()).isNotNull() ;
     }
 }
