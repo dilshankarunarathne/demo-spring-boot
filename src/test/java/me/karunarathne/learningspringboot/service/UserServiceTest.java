@@ -79,7 +79,13 @@ class UserServiceTest {
 
     @Test
     void shouldThrowExceptionWhenGenderIsInvalid () throws Exception {
-        assertThatThrownBy ()
+        assertThatThrownBy (
+                () -> userService.getAllUsers(
+                        Optional.of ("somethingthatdoesntexist")
+                )
+        )
+                .isInstanceOf (IllegalStateException.class)
+                .hasMessageContaining("Invalid gender") ;
     }
 
     @Test
