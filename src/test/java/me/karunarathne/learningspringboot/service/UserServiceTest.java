@@ -67,7 +67,8 @@ class UserServiceTest {
 
         ImmutableList <User> users = new ImmutableList<User>()
                 .add (anna)
-                .add ()
+                .add (joe)
+                
 
         List <User> users = new ArrayList<User>() ;
         users.add(anna) ;
