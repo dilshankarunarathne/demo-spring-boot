@@ -31,6 +31,6 @@ public class UserResource {
     }
 
     public User fetchUser () {
-        
+        return userService.getUser()
     }
 }
