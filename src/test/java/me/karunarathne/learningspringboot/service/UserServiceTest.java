@@ -72,7 +72,7 @@ class UserServiceTest {
 
         given (fakeDataDao.selectAllUsers()).willReturn(users) ;
 
-        userService.getAllUsers(Optional.of("MALE")) ;
+        List <User> filteredUsers = userService.getAllUsers(Optional.of("MALE")) ;
     }
 
     @Test
