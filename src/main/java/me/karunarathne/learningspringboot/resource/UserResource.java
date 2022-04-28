@@ -49,6 +49,7 @@ public class UserResource {
                 ) ;
     }
 
+    @RequestMapping 
     public ResponseEntity <Integer> insertNewUser (User user) {
         int result = userService.insertUser (user) ;
         if (result == 1) {
