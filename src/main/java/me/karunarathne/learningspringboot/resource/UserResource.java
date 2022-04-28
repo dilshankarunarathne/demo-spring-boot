@@ -44,9 +44,11 @@ public class UserResource {
 
         return userOptional
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body (
-                        new ErrorMessage ("user " + userUid + " was not found !"))
+                .orElseGet(
+                        () -> ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body (
+                            new ErrorMessage ("user " + userUid + " was not found !")
+                        )
                 ) ;
 
 //        if (userOptional.isPresent()) {
