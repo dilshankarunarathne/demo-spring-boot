@@ -29,8 +29,9 @@ public class UserResource {
             method = RequestMethod.GET
     )
     public List<User> fetchUsers (
-            @QueryParam ("gender") String gender, @QueryParam ("ageLessThan") Integer ageLessThan
+                @QueryParam ("gender") String gender, @QueryParam ("ageLessThan") Integer ageLessThan
             ) {
+        
         return userService.getAllUsers() ;
     }
 
