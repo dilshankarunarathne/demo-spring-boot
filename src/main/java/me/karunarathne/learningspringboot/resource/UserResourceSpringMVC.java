@@ -43,7 +43,8 @@ public class UserResourceSpringMVC {
         if (userOptional.isPresent()) {
             return Response.ok(userOptional.get()).build() ;
         }
-        return Response.status ()
+        return Response.status (Response.Status.NOT_FOUND)
+                .
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet (
