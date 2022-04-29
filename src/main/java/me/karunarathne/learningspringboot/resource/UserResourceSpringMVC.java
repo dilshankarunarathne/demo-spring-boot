@@ -51,7 +51,7 @@ public class UserResourceSpringMVC {
     @POST
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
-    public Response insertNewUser (@RequestBody User user) {
+    public Response insertNewUser (User user) {
         int result = userService.insertUser (user) ;
         return getIntegerResponseEntity (result) ;
     }
