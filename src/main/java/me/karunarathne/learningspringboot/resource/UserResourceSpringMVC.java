@@ -76,7 +76,7 @@ public class UserResourceSpringMVC {
         if (result == 1) {
             return Response.ok().build() ;
         }
-        return ResponseEntity.badRequest().build();
+        return Response.status(result).build() ;
     }
 
     class ErrorMessage {
