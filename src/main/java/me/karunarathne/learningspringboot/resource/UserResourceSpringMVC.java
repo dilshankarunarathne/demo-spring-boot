@@ -26,11 +26,7 @@ public class UserResourceSpringMVC {
     public UserResourceSpringMVC(UserService userService) {
         this.userService = userService ;
     }
-
-    @RequestMapping (
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE
-    )
+    
     @GET
     @Produces (MediaType.APPLICATION_JSON)
     public List<User> fetchUsers ( @QueryParam("gender") String gender) {
