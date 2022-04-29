@@ -39,6 +39,7 @@ public class UserResourceSpringMVC {
     }
 
     @GET
+    @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
         return userService.getUser(userUid)
