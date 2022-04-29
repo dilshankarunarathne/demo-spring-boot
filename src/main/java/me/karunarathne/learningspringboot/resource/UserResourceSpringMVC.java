@@ -74,7 +74,7 @@ public class UserResourceSpringMVC {
 
     private ResponseEntity<Integer> getIntegerResponseEntity (int result) {
         if (result == 1) {
-            return ResponseEntity.ok().build();
+            return Response.ok().build() ;
         }
         return ResponseEntity.badRequest().build();
     }
