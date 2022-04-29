@@ -41,7 +41,7 @@ public class UserResourceSpringMVC {
     public Response fetchUser (@PathVariable ("userUid") UUID userUid) {
         Optional <User> userOptional = userService.getUser (userUid) ;
         if (userOptional.isPresent()) {
-            
+            return Response.ok(userOptional.get()).build() ;
         }
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
