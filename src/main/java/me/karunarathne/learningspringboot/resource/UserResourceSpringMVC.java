@@ -57,7 +57,7 @@ public class UserResourceSpringMVC {
         return getIntegerResponseEntity (result) ;
     }
 
-
+    @PUT 
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
