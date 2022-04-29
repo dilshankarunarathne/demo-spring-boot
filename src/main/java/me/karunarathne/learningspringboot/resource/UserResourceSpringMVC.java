@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,7 +27,7 @@ public class UserResourceSpringMVC {
     public UserResourceSpringMVC(UserService userService) {
         this.userService = userService ;
     }
-    
+
     @GET
     @Produces (MediaType.APPLICATION_JSON)
     public List<User> fetchUsers ( @QueryParam("gender") String gender) {
@@ -36,7 +37,7 @@ public class UserResourceSpringMVC {
     @GET
     @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
-    public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
+    public Response fetchUser (@PathVariable ("userUid") UUID userUid) {
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet (
