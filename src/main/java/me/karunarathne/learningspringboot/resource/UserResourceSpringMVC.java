@@ -72,7 +72,7 @@ public class UserResourceSpringMVC {
         return getIntegerResponseEntity (result) ;
     }
 
-    private ResponseEntity<Integer> getIntegerResponseEntity (int result) {
+    private Response getIntegerResponseEntity (int result) {
         if (result == 1) {
             return Response.ok().build() ;
         }
