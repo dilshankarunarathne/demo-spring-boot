@@ -3,7 +3,6 @@ package me.karunarathne.learningspringboot.resource;
 import me.karunarathne.learningspringboot.model.User;
 import me.karunarathne.learningspringboot.service.UserService;
 
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
