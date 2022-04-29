@@ -65,7 +65,8 @@ public class UserResourceSpringMVC {
         return getIntegerResponseEntity (result) ;
     }
 
-    @DELETE 
+    @DELETE
+    @Produces (MediaType.APPLICATION_JSON)
     @RequestMapping (
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE,
