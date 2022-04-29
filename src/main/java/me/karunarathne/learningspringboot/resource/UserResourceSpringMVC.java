@@ -70,6 +70,4 @@ public class UserResourceSpringMVC {
         }
         return Response.status(result).build() ;
     }
-
-    
 }
