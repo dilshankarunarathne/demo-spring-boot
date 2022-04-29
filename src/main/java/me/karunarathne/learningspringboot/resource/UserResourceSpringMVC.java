@@ -17,10 +17,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-//@RestController
-//@RequestMapping (
-//        path = "/api/v1/users"
-//)
 public class UserResourceSpringMVC {
     private UserService userService ;
 
