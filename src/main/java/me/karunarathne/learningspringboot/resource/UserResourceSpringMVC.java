@@ -43,6 +43,8 @@ public class UserResourceSpringMVC {
             produces = MediaType.APPLICATION_JSON_VALUE,
             path = "{userUid}"
     )
+
+    @Path ("{userUid}")
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
@@ -55,7 +57,7 @@ public class UserResourceSpringMVC {
     }
 
     @GET
-    @Produces (MediaType.APPLICATION_JSON) 
+    @Produces (MediaType.APPLICATION_JSON)
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
         return getIntegerResponseEntity (result) ;
