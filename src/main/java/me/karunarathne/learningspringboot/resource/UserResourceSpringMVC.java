@@ -67,6 +67,7 @@ public class UserResourceSpringMVC {
 
     @DELETE
     @Produces (MediaType.APPLICATION_JSON)
+    @Path ("{userUid}")
     @RequestMapping (
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE,
