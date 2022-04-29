@@ -31,6 +31,7 @@ public class UserResourceSpringMVC {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
+    @GET
     public List<User> fetchUsers ( @QueryParam("gender") String gender) {
         return userService.getAllUsers(Optional.ofNullable(gender)) ;
     }
