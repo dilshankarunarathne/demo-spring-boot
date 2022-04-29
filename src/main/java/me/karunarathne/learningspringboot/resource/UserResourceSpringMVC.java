@@ -59,7 +59,7 @@ public class UserResourceSpringMVC {
     @PUT
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
-    public Response updateUser (@RequestBody User user) {
+    public Response updateUser (User user) {
         int result = userService.updateUser (user) ;
         return getIntegerResponseEntity (result) ;
     }
