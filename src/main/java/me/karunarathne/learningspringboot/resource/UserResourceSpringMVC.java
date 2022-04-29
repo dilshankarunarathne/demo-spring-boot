@@ -57,7 +57,7 @@ public class UserResourceSpringMVC {
         return getIntegerResponseEntity (result) ;
     }
 
-    @PUT 
+    @PUT
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
     public ResponseEntity <Integer> updateUser (@RequestBody User user) {
@@ -65,6 +65,7 @@ public class UserResourceSpringMVC {
         return getIntegerResponseEntity (result) ;
     }
 
+    @DELETE 
     @RequestMapping (
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE,
