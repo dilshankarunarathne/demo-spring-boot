@@ -38,12 +38,7 @@ public class UserResourceSpringMVC {
         return userService.getAllUsers(Optional.ofNullable(gender)) ;
     }
 
-    @RequestMapping(
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            path = "{userUid}"
-    )
-
+    @GET
     @Path ("{userUid}")
     public ResponseEntity <?> fetchUser (@PathVariable ("userUid") UUID userUid) {
         return userService.getUser(userUid)
