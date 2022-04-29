@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.QueryParam;
 
 import java.util.List;
@@ -51,11 +52,8 @@ public class UserResourceSpringMVC {
                 ) ;
     }
 
-    @RequestMapping (
-            method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE
-    )
+    @GET
+    
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
         return getIntegerResponseEntity (result) ;
