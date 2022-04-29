@@ -39,7 +39,10 @@ public class UserResourceSpringMVC {
     @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
     public Response fetchUser (@PathVariable ("userUid") UUID userUid) {
-        Optional <User> userOptional = userService.getUser (userUid) ; 
+        Optional <User> userOptional = userService.getUser (userUid) ;
+        if (userOptional.isPresent()) {
+            
+        }
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet (
