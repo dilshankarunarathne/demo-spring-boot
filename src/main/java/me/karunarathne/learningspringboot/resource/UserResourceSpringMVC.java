@@ -3,6 +3,7 @@ package me.karunarathne.learningspringboot.resource;
 import me.karunarathne.learningspringboot.model.User;
 import me.karunarathne.learningspringboot.service.UserService;
 
+import org.checkerframework.checker.nullness.Opt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,6 +39,7 @@ public class UserResourceSpringMVC {
     @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
     public Response fetchUser (@PathVariable ("userUid") UUID userUid) {
+        Optional <User> userOptional = userService.getUser (userUid) ; 
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet (
