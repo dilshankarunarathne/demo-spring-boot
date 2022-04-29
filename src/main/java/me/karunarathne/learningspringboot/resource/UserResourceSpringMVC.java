@@ -52,7 +52,7 @@ public class UserResourceSpringMVC {
                 ) ;
     }
 
-    @GET
+    @POST
     @Produces (MediaType.APPLICATION_JSON)
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
