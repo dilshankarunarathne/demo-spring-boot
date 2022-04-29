@@ -44,7 +44,7 @@ public class UserResourceSpringMVC {
             return Response.ok(userOptional.get()).build() ;
         }
         return Response.status (Response.Status.NOT_FOUND)
-                .entity (new ErrorMessage ())
+                .entity (new ErrorMessage ("user " + userUid + " was not found !"))
         return userService.getUser(userUid)
                 .<ResponseEntity <?>> map(ResponseEntity::ok)
                 .orElseGet (
