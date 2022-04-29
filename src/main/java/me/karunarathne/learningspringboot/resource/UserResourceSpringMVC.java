@@ -8,10 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 import java.util.List;
@@ -53,6 +50,7 @@ public class UserResourceSpringMVC {
     }
 
     @POST
+    @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
     public ResponseEntity <Integer> insertNewUser (@RequestBody User user) {
         int result = userService.insertUser (user) ;
