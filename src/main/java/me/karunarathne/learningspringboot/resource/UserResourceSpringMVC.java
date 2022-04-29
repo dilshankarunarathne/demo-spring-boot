@@ -71,19 +71,5 @@ public class UserResourceSpringMVC {
         return Response.status(result).build() ;
     }
 
-    class ErrorMessage {
-        String errorMessage ;
-
-        public ErrorMessage(String message) {
-            this.errorMessage = message;
-        }
-
-        public String getMessage() {
-            return errorMessage;
-        }
-
-        public void setMessage(String message) {
-            this.errorMessage = message;
-        }
-    }
+    
 }
