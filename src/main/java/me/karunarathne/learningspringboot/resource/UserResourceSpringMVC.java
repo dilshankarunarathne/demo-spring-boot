@@ -67,7 +67,7 @@ public class UserResourceSpringMVC {
     @DELETE
     @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
-    public ResponseEntity <Integer> deleteUser (@PathVariable ("userUid") UUID userUid) {
+    public ResponseEntity <Integer> deleteUser (@PathParam ("userUid") UUID userUid) {
         int result = userService.removeUser (userUid) ;
         return getIntegerResponseEntity (result) ;
     }
