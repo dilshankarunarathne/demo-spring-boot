@@ -12,7 +12,7 @@ public class ClientProxyConfig {
     @Bean
     public UserResourceV1 getUserResourceV1 () {
         final String userEndPointUrl = "http://localhost:8080/api/v1/users" ;
-        ResteasyClient client = new ResteasyClientBuilder().build() ;
+        ResteasyClient client = ResteasyClientBuilder().build() ;
         ResteasyWebTarget target = client.target(userEndPointUrl) ;
         UserResourceV1 proxy = target.proxy(UserResourceV1.class) ;
         return proxy ;
