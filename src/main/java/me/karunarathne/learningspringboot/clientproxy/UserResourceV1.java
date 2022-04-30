@@ -25,7 +25,7 @@ public interface UserResourceV1 {
     @POST
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
-    public Response insertNewUser (User user) ;
+    Response insertNewUser (User user) ;
 
     @PUT
     @Consumes (MediaType.APPLICATION_JSON)
