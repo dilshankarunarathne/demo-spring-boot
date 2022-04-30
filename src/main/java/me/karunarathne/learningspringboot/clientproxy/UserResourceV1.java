@@ -35,5 +35,5 @@ public interface UserResourceV1 {
     @DELETE
     @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
-    public Response deleteUser (@PathParam ("userUid") UUID userUid) ;
+    Response deleteUser (@PathParam ("userUid") UUID userUid) ;
 }
