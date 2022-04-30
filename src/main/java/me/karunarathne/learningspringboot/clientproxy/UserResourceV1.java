@@ -15,7 +15,7 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 public interface UserResourceV1 {
     @GET
     @Produces(APPLICATION_JSON)
-    public List<User> fetchUsers (@QueryParam("gender") String gender) ;
+    List<User> fetchUsers (@QueryParam("gender") String gender) ;
 
     @GET
     @Produces (MediaType.APPLICATION_JSON)
