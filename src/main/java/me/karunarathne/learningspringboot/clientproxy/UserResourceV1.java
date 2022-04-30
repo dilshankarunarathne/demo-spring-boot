@@ -20,7 +20,7 @@ public interface UserResourceV1 {
     @GET
     @Produces (MediaType.APPLICATION_JSON)
     @Path("{userUid}")
-    public Response fetchUser (@PathParam("userUid") UUID userUid) ;
+    Response fetchUser (@PathParam("userUid") UUID userUid) ;
 
     @POST
     @Consumes (MediaType.APPLICATION_JSON)
