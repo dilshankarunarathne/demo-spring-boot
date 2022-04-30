@@ -35,8 +35,5 @@ public interface UserResourceV1 {
     @DELETE
     @Produces (MediaType.APPLICATION_JSON)
     @Path ("{userUid}")
-    public Response deleteUser (@PathParam ("userUid") UUID userUid) {
-        int result = userService.removeUser (userUid) ;
-        return getIntegerResponseEntity (result) ;
-    }
+    public Response deleteUser (@PathParam ("userUid") UUID userUid) ;
 }
