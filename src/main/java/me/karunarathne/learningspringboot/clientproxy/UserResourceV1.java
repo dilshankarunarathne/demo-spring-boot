@@ -30,7 +30,7 @@ public interface UserResourceV1 {
     @PUT
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
-    public Response updateUser (User user) ;
+    Response updateUser (User user) ;
 
     @DELETE
     @Produces (MediaType.APPLICATION_JSON)
