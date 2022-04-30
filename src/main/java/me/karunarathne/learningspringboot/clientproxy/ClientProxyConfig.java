@@ -11,13 +11,12 @@ import org.springframework.context.annotation.Configuration;
 public class ClientProxyConfig {
 
     @Value ("${users.api.url.v1}")
-    private int usersEndPointUrl ;
+    private String usersEndPointUrl ;
 
     @Bean
     public UserResourceV1 getUserResourceV1 () {
-        final String userEndPointUrl = "http://localhost:8080/api/v1/users" ;
         ResteasyClient client = new ResteasyClientBuilder().build() ;
-        ResteasyWebTarget target = client.target(userEndPointUrl) ;
+        ResteasyWebTarget target = client.target(usersEndPointUrl) ;
         UserResourceV1 proxy = target.proxy(UserResourceV1.class) ;
         return proxy ;
     }
