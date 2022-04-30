@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ClientProxyConfig {
 
-    @Value ()
+    @Value ("${users.api.url.v1}")
     private int usersEndPointUrl ;
 
     @Bean
