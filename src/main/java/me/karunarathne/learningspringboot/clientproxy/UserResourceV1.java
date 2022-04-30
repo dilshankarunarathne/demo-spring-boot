@@ -20,15 +20,7 @@ public interface UserResourceV1 {
     @GET
     @Produces (MediaType.APPLICATION_JSON)
     @Path("{userUid}")
-    public Response fetchUser (@PathParam("userUid") UUID userUid) {
-        Optional <User> userOptional = userService.getUser (userUid) ;
-        if (userOptional.isPresent()) {
-            return Response.ok(userOptional.get()).build() ;
-        }
-        return Response.status (Response.Status.NOT_FOUND)
-                .entity (new ErrorMessage("user " + userUid + " was not found !"))
-                .build() ;
-    }
+    public Response fetchUser (@PathParam("userUid") UUID userUid) ;
 
     @POST
     @Consumes (MediaType.APPLICATION_JSON)
