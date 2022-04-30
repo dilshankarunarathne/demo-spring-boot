@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
+		<rest.easy.client.version>4.7.2.Final</rest.easy.client.version>
 	</properties>
 
 	<dependencies>
@@ -50,6 +51,12 @@
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-spring-boot-starter</artifactId>
 			<version>4.9.1.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>${rest.easy.client.version}</version>
 		</dependency>
 
 	</dependencies>
