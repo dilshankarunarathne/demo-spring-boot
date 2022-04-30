@@ -1,4 +1,5 @@
 package me.karunarathne.learningspringboot.clientproxy;
 
-public class ClientProxyConfig { 
+
+public class ClientProxyConfig {
 }
