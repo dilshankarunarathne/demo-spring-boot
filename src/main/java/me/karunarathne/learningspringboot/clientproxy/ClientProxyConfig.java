@@ -4,5 +4,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ClientProxyConfig {
-    
+    public UserResourceV1 getUserResourceV1 () {
+        
+    }
 }
