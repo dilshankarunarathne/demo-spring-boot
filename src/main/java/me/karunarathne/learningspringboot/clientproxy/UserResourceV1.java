@@ -30,10 +30,7 @@ public interface UserResourceV1 {
     @PUT
     @Consumes (MediaType.APPLICATION_JSON)
     @Produces (MediaType.APPLICATION_JSON)
-    public Response updateUser (User user) {
-        int result = userService.updateUser (user) ;
-        return getIntegerResponseEntity (result) ;
-    }
+    public Response updateUser (User user) ;
 
     @DELETE
     @Produces (MediaType.APPLICATION_JSON)
